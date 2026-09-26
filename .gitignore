@@ -1,0 +1,26 @@
+# Local-only application originals and personal files
+**/Essay_Archive/
+**/Original_Applications/
+**/Private/
+**/Personal_Originals/
+**/*.pdf
+**/*.docx
+**/*.doc
+**/*.zip
+**/*.7z
+**/*.rar
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+**/*secret*
+**/*credentials*
+
+# Operating system / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp
