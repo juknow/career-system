@@ -19,7 +19,10 @@
 2. Career_Master_Profile_v1.4.md: 지원자에 대한 확정 사실·역할·성과·커리어 선호의 최우선 기준.
 3. Personal_Writing_Knowledge_Base_v0.4.md: 과거 자소서 문항·관점·문체 검색용.
 4. Essay Archive: 필요한 과거 지원서의 실제 원문이 제공된 경우에만 참조한다.
-5. Experience Story Bank: 필요할 때만 확인하는 읽기 전용 자료. 임의로 갱신하지 않는다.
+5. Experience Story Bank: 사건별 맥락을 찾는 선택적 자료. 변경은 사전에 사용자 승인을 받는다.
+
+# 과거 자기소개서 원문 검색
+Writing KB의 관련 문항 ID를 찾아 필요하면 Story Bank의 사건 맥락을 참고한다. 실제 원문은 연결된 Google Drive의 Career_Originals/Applications/2026에서 해당 기업·연도의 파일을 검색해 직접 열람한다. Drive 접근이 실패한 경우 접근 권한이 있는 Private GitHub career-system-private의 Career_System/Data/Essay_Archive/2026에서 대응 파일을 찾는다. 두 경로 모두 읽을 수 없다면 해당 채팅에 필요한 원문을 요청한다. 원문을 읽지 못했다면 파일명·색인만으로 실제 답변을 확인했다고 주장하지 않는다. 확인한 내용과 창의적인 서술 제안은 구분한다.
 
 # 작업 원칙
 - 중요한 사실·경험·전략 변경이나 새로운 제안은 반영 전에 사용자에게 설명하고 승인을 받는다.
@@ -33,7 +36,7 @@
 # 실행 방법
 기업별로 단계별 프롬프트를 사용한다. 이전 단계에서 확정한 직무·경험 배정표 등 필요한 결과가 새 채팅에 없다면 사용자가 제공한 확정 결과를 받아 진행한다.</pre>
 <ol start="3">
-<li>프로젝트 자료(소스)에 <strong>Career_System_Common_Rules.md</strong>, <strong>Data/Career_Master_Profile_v1.4.md</strong>, <strong>Data/Personal_Writing_Knowledge_Base_v0.4.md</strong>의 <strong>세 파일</strong>을 추가합니다. 다운로드 또는 로컬에 저장된 실제 파일을 업로드합니다. GitHub 링크만 적어 둔 것이 파일 내용이 업로드되었다는 뜻은 아닙니다.</li>
+<li>프로젝트 자료(소스)에 <strong>Career_System_Common_Rules.md</strong>, <strong>Data/Career_Master_Profile_v1.4.md</strong>, <strong>Data/Personal_Writing_Knowledge_Base_v0.4.md</strong>, <strong>Data/Experience_Story_Bank_v1.0_READ_ONLY.md</strong>의 <strong>네 파일</strong>을 추가합니다. 다운로드 또는 로컬에 저장된 실제 파일을 업로드합니다. GitHub 링크만 적어 둔 것이 파일 내용이 업로드되었다는 뜻은 아닙니다.</li>
 <li>프로젝트 안에서 <strong>새 채팅</strong>을 만들고 GitHub의 <strong>Career_System/Prompts/01_Career_Profile_로딩.md</strong>를 엽니다. 파일 <strong>본문 전체</strong>를 복사해 채팅 입력창에 붙여 넣고 전송합니다. 파일 경로를 붙여 넣는 것과 본문을 복사하는 것은 다릅니다.</li>
 <li>응답에서 기준 파일을 읽었는지, 커리어 선호와 미확인 사항을 제대로 구분했는지 확인합니다. 누락이나 새로운 변경 제안이 있다면 다음 단계 이전에 확인합니다.</li>
 </ol>
@@ -41,13 +44,14 @@
 <p>ChatGPT 프로젝트 지침은 해당 프로젝트 안의 채팅에 적용됩니다. 프로젝트 파일이나 이전 대화가 어느 채팅에서나 항상 정확히 인용된다고 가정하지 말고, 새 채팅에서 필요한 자료가 확인되지 않으면 다시 제공하세요.</p>
 
 <h2>1. 시작 전 준비</h2>
-<p>먼저 ChatGPT 취업 준비 프로젝트에 아래 세 파일을 등록합니다.</p>
+<p>먼저 ChatGPT 취업 준비 프로젝트에 아래 네 파일을 등록합니다. Story Bank는 사건 세부 설명이 필요한 경우에만 활용합니다.</p>
 <ol>
 <li><strong>Career System Common Rules</strong> — 중요한 판단이나 변경 사항을 최종 반영하기 전에 사용자에게 확인하는 규칙</li>
 <li><strong>Career Master Profile</strong> — 학력, 프로젝트, 기술, 개인 기여, 확인된 성과와 커리어 선호에 관한 사실</li>
 <li><strong>Personal Writing Knowledge Base</strong> — 기존 자소서 문항과 재사용 가능한 생각, 관점, 문체를 찾는 자료</li>
+<li><strong>Experience Story Bank</strong> — 실제 경험의 세부 사건·갈등·행동을 찾는 선택적 자료</li>
 </ol>
-<p>과거 자소서 원문은 별도 보관합니다. 필요한 글이 검색됐을 때 해당 PDF 또는 원문 파일을 채팅에 제공합니다. Experience Story Bank는 과거 사건의 세부 내용이 필요할 때만 참고하며 별도로 갱신하지 않습니다.</p>
+<p>과거 자소서 원문은 별도 보관합니다. 프로젝트 소스에 연결된 Google Drive 원본을 실제로 검색하고 열람합니다. 접근에 실패하면 Private GitHub 백업본을 찾고, 두 경로 모두 불가능하면 필요한 원문만 해당 채팅에 첨부합니다. Story Bank는 필요한 사건을 참조하고 사용자 승인에 따라 보강할 수 있습니다.</p>
 
 <h2>2. 기업별 실제 사용 순서</h2>
 <p><strong>공통 실행 방법:</strong> 해당 단계의 GitHub 프롬프트 파일을 열고 본문 전체를 복사 → 같은 프로젝트 안의 작업 채팅에 붙여 넣기 → 중괄호 안의 변수에 실제 회사명·공고 URL·질문 등을 입력 → 필요한 첨부를 추가 → 실행합니다. 문항 작성은 해당 기업의 전략 채팅에서 분기하거나 새 채팅으로 시작할 수 있습니다. 새 채팅에서 앞선 결정이 보이지 않으면 확정한 직무와 배정표의 해당 행을 직접 전달합니다.</p>
@@ -74,8 +78,8 @@
 
 <h3>4단계. 자기소개서 문항별 작성</h3>
 <p><strong>실행 파일:</strong> 05_자소서_단일_문항_작성.md</p>
-<p>문항마다 새 채팅을 열어 질문 원문, 글자 수, 승인한 경험 배정표의 해당 행을 제공합니다. 공통 세 파일을 읽을 수 없는 채팅이라면 다시 첨부합니다.</p>
-<p>과거 관련 답변이 Writing Knowledge Base에서 발견됐다면 그 답변의 원문도 함께 제공합니다. 과거의 좋은 관점만 참고하고 이전 회사의 지원동기나 확인되지 않은 사실은 옮기지 않습니다.</p>
+<p>문항마다 새 채팅을 열어 질문 원문, 글자 수, 승인한 경험 배정표의 해당 행을 제공합니다. 상시 등록한 네 파일을 읽을 수 없는 채팅이라면 필요한 파일을 다시 제공합니다.</p>
+<p>과거 관련 답변이 Writing Knowledge Base에서 발견됐다면 연결된 Google Drive를 검색해 원문을 직접 열람하고, 실패하면 Private GitHub 백업 또는 해당 채팅 첨부를 이용합니다. 과거의 좋은 관점만 참고하고 이전 회사의 지원동기나 확인되지 않은 사실은 옮기지 않습니다.</p>
 <p><strong>확인할 결과:</strong> 문항 분석 → 필요한 질문과 작성 방향 확인 → 제출 가능한 초안. 중요한 소재 변경이 제안되면 먼저 결정합니다.</p>
 
 <h3>5단계. 지원서 전체 QA</h3>
@@ -86,7 +90,7 @@
 <h2>3. 새로운 지원서를 다음 지원에 활용하기</h2>
 <p>지원서 원본(PDF·자기소개서 전체 텍스트)은 공개 GitHub에 올리지 않습니다. 원본은 Google Drive의 <code>Career_Originals/Applications/연도/기업명/</code>에 보관하며, Google Apps Script가 비공개 GitHub의 <code>Career_System/Data/Essay_Archive/연도/기업명/</code>으로 자동 백업합니다. 관련 과거 지원서의 원문이 필요할 때 해당 자료만 ChatGPT 채팅에 첨부합니다. 자동 백업은 본문이나 경력 사실을 자동으로 검증·갱신하지 않습니다.</p>
 <p>완성한 지원서의 질문과 답변을 원문 그대로 보관합니다. 필요한 경우 다음 요청문을 별도 채팅에서 사용합니다.</p>
-<blockquote>첨부한 지원서의 질문과 답변을 원문 그대로 보관할 수 있도록 정리해 줘. Writing Knowledge Base와 비교해 새롭게 등록할 만한 문항과 인사이트만 먼저 제안하고, 내가 승인한 항목만 파일에 반영해 줘. 새로운 경력 사실이 발견되면 Master Profile 수정안을 별도로 제시해 줘. Experience Story Bank는 수정하지 마.</blockquote>
+<blockquote>첨부한 지원서의 질문과 답변을 원문 그대로 보관할 수 있도록 정리해 줘. Writing Knowledge Base와 비교해 새롭게 등록할 만한 문항과 인사이트만 먼저 제안하고, 내가 승인한 항목만 파일에 반영해 줘. 새로운 경력 사실이 발견되면 Master Profile 수정안을 별도로 제시해 줘. Experience Story Bank에도 보강이 필요하면 변경할 사건 카드와 출처를 먼저 제시하고 내 승인을 받은 뒤 반영해 줘.</blockquote>
 <p>기존 자기소개서 등록이나 경험 갱신을 위해 별도의 전용 프롬프트를 실행할 필요는 없습니다.</p>
 
 <h2>3-1. GitHub와 Google Drive 자동 백업 운영</h2>
@@ -107,6 +111,16 @@
 </ol>
 <p><strong>중요:</strong> 이 동기화는 Public → Private, Drive → Private 단방향입니다. 삭제·경로 변경·접근 권한 문제는 실행 결과를 확인하고 별도로 관리합니다. 문서 내용 수정이나 새로운 경력 사실의 승인은 여전히 사용자에게 있습니다.</p>
 
+<h2>3-2. 일반 ChatGPT 웹에서 과거 지원서 원문 찾기</h2>
+<p><strong>원칙:</strong> Writing KB와 Story Bank는 검색을 돕는 색인이고, 실제 문장·수치 비교를 위해서는 원문을 열람해야 합니다. Work 모드로 바꿀 필요는 없습니다.</p>
+<ol>
+<li><strong>프로젝트 소스 연결:</strong> 기존 네 MD 파일을 프로젝트에 업로드한 뒤, 같은 비공개 프로젝트의 <strong>소스 추가</strong>에서 <a href="https://drive.google.com/drive/folders/1nCBVcr98_bgKvZ3r4qU8pXnTebglIpX3">Google Drive Career_Originals/Applications/2026 폴더</a> 링크를 추가합니다. 요구하는 경우 Google Drive 앱 접근 권한을 승인합니다.</li>
+<li><strong>색인 검색:</strong> 관련 과거 문항을 Writing KB에서 ID(예: <code>KB26-Q2</code>)로 찾고, Story Bank에서 필요한 사건의 맥락만 보충합니다. Writing KB의 원문 위치 카탈로그에서 회사·연도·파일명을 확인합니다.</li>
+<li><strong>실제 파일 열람:</strong> 연결된 Google Drive에서 해당 기업의 Markdown 원문이 있으면 우선 검색해 해당 문항을 읽고, 필요한 경우 PDF를 대조합니다. Google Drive 앱은 프로젝트에서 미리 전체 내용을 동기화하지 않으므로 매 작업에서 실제 접근 가능 여부를 확인해야 합니다.</li>
+<li><strong>대체 경로:</strong> Drive에서 원문을 읽지 못한다면 접근 가능한 <a href="https://github.com/juknow/career-system-private">Private GitHub</a>의 <code>Career_System/Data/Essay_Archive/2026/</code>에서 대응 파일을 열람합니다. PDF가 직접 열리지 않는 등 두 경로 모두 실패하면 해당 원문을 채팅에 첨부합니다.</li>
+<li><strong>대조 후 작성:</strong> 실제 열람한 원문 파일과 문항을 밝히고 Master의 객관적 사실, Story Bank의 사건, KB의 재활용 가능한 관점을 대조합니다. 객관적인 경력 정보와 창의적인 서술 후보를 구분해 먼저 사용자에게 검토받습니다.</li>
+</ol>
+<p><strong>주의:</strong> Google Drive 및 GitHub가 현재 채팅에서 사용할 수 있는 연결 앱인지 확인합니다. 단순히 폴더 링크나 원문 ID가 존재한다는 이유로 파일 내용을 이미 읽었다고 가정하지 않습니다. GitHub 또는 Drive의 변경이 프로젝트에 업로드한 네 MD 파일을 자동 교체하지도 않습니다.</p>
 <h2>4. 각 파일은 언제 열까?</h2>
 <table>
 <thead><tr><th>자료</th><th>사용할 때</th></tr></thead>
