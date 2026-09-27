@@ -9,7 +9,7 @@
 | [`Career_System_Common_Rules.md`](Career_System/Career_System_Common_Rules.md) | 모든 단계에 공통으로 적용하는 질문·검토·승인 규칙 |
 | [`Data/Career_Master_Profile_v1.4.md`](Career_System/Data/Career_Master_Profile_v1.4.md) | 학력, 프로젝트, 직접 수행한 역할, 기술 및 성과에 대한 기준 정보 |
 | [`Data/Personal_Writing_Knowledge_Base_v0.4.md`](Career_System/Data/Personal_Writing_Knowledge_Base_v0.4.md) | 과거 자기소개서의 문항별 기록, 인사이트 및 작성 방식 |
-| [`Data/Experience_Story_Bank_v1.0_READ_ONLY.md`](Career_System/Data/Experience_Story_Bank_v1.0_READ_ONLY.md) | 이전에 정리한 사건별 경험 참고 자료(읽기 전용) |
+| [`Data/Experience_Story_Bank_v1.0_READ_ONLY.md`](Career_System/Data/Experience_Story_Bank_v1.0_READ_ONLY.md) | 사건별 경험 카드. 원문 근거와 사용자 승인 범위에서 수정·추가 |
 | [`Prompts/`](Career_System/Prompts/) | 단계별 실행 프롬프트 |
 | [`Guide/Career_System_사용_가이드_Notion.html`](Career_System/Guide/Career_System_사용_가이드_Notion.html) | 실제 사용 순서를 설명하는 Notion용 가이드 |
 | [`Review/`](Career_System/Review/) | 변경 내역 및 검토 자료 |
