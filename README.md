@@ -16,7 +16,17 @@
 
 ## 사용 순서
 
-**처음 한 번:** ChatGPT 웹의 Career System 프로젝트 지침을 등록하고 최신 Common Rules, Career Master Profile, Writing Knowledge Base를 프로젝트 소스에 추가합니다. Story Bank는 필요한 경우에만 참고하는 선택 자료입니다. 기존 `01_Career_Profile_로딩` 파일은 보존하지만 프로젝트 내부에서는 매번 실행하지 않습니다.
+**처음 한 번:** ChatGPT 웹의 Career System 프로젝트 지침을 등록하고, 아래 **네 개의 MD 파일을 모두 프로젝트 소스에 등록**합니다. Story Bank는 등록 필수이지만 구체적인 사건을 확인할 때만 참조하며, 별도 승인 없이 내용을 수정하지 않습니다. Google Drive의 지원서 원본 폴더도 연결합니다. 기존 `01_Career_Profile_로딩` 파일은 보존하지만 프로젝트 내부에서는 매번 실행하지 않습니다.
+
+**프로젝트 소스 초기 등록 목록**
+
+1. [Career_System_Common_Rules.md](Career_System/Career_System_Common_Rules.md)
+2. [Career_Master_Profile.md](Career_System/Data/Career_Master_Profile.md)
+3. [Personal_Writing_Knowledge_Base.md](Career_System/Data/Personal_Writing_Knowledge_Base.md)
+4. [Experience_Story_Bank.md](Career_System/Data/Experience_Story_Bank.md)
+5. [Google Drive · Career_Originals/Applications](https://drive.google.com/drive/folders/1H6306HKrzjMN5e_8-DO49w8pH0Lepuc-) 폴더를 프로젝트 소스에 연결합니다. 필요한 경우 Google Drive 앱 권한을 승인합니다. 폴더 링크 등록만으로 전체 파일이 미리 읽히거나 동기화되는 것은 아니므로, 과거 지원서가 필요할 때 실제 원문을 검색·열람합니다. 연결이 불가능하다면 접근 가능한 Private GitHub 백업을 이용하거나 해당 원문을 채팅에 첨부합니다.
+
+GitHub·Google Drive의 변경 사항은 프로젝트 소스의 등록 파일을 자동 갱신하지 않으므로, 원본 파일이 바뀌면 직접 교체합니다.
 
 **기업별 작업:**
 
