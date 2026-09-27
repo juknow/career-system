@@ -64,10 +64,28 @@
 <p><strong>확인할 결과:</strong> 사실·수치 오류, 경험 중복, JD와의 연결, 과거 회사용 표현, 예상 면접 질문. 수정 제안을 확인한 후 승인한 내용만 실제 지원서에 반영합니다.</p>
 
 <h2>3. 새로운 지원서를 다음 지원에 활용하기</h2>
-<p>지원서 원본(PDF·자기소개서 전체 텍스트)은 공개 GitHub에 올리지 않고, 사용자 로컬 원본에서 보관합니다. 관련 문항을 다시 활용할 때만 필요한 원문을 해당 ChatGPT 채팅에 첨부합니다. 향후 Google Drive 및 별도 비공개 저장소의 자동 백업 설정은 별도 승인과 설치가 필요합니다.</p>
+<p>지원서 원본(PDF·자기소개서 전체 텍스트)은 공개 GitHub에 올리지 않습니다. 원본은 Google Drive의 <code>Career_Originals/Applications/연도/기업명/</code>에 보관하며, Google Apps Script가 비공개 GitHub의 <code>Career_System/Data/Essay_Archive/연도/기업명/</code>으로 자동 백업합니다. 관련 과거 지원서의 원문이 필요할 때 해당 자료만 ChatGPT 채팅에 첨부합니다. 자동 백업은 본문이나 경력 사실을 자동으로 검증·갱신하지 않습니다.</p>
 <p>완성한 지원서의 질문과 답변을 원문 그대로 보관합니다. 필요한 경우 다음 요청문을 별도 채팅에서 사용합니다.</p>
 <blockquote>첨부한 지원서의 질문과 답변을 원문 그대로 보관할 수 있도록 정리해 줘. Writing Knowledge Base와 비교해 새롭게 등록할 만한 문항과 인사이트만 먼저 제안하고, 내가 승인한 항목만 파일에 반영해 줘. 새로운 경력 사실이 발견되면 Master Profile 수정안을 별도로 제시해 줘. Experience Story Bank는 수정하지 마.</blockquote>
 <p>기존 자기소개서 등록이나 경험 갱신을 위해 별도의 전용 프롬프트를 실행할 필요는 없습니다.</p>
+
+<h2>3-1. GitHub와 Google Drive 자동 백업 운영</h2>
+<p><strong>현재 파일별 기준 위치</strong></p>
+<table>
+<thead><tr><th>자료</th><th>기준 위치</th><th>자동 반영 위치</th></tr></thead>
+<tbody>
+<tr><td>공통 규칙·Master·Writing KB·프롬프트·가이드·Review</td><td><a href="https://github.com/juknow/career-system">Public career-system</a>의 <code>Career_System/</code></td><td><a href="https://github.com/juknow/career-system-private">Private career-system-private</a>의 동일 경로</td></tr>
+<tr><td>개인 지원서 원본 PDF·MD·TXT</td><td><a href="https://drive.google.com/drive/folders/1H6306HKrzjMN5e_8-DO49w8pH0Lepuc-">Google Drive Career_Originals/Applications</a> 아래 연도/기업명</td><td>Private <code>Career_System/Data/Essay_Archive/</code> 아래 동일한 연도/기업명</td></tr>
+</tbody>
+</table>
+<ol>
+<li><strong>공통 자료 수정:</strong> 사용자 검토·승인 후 Public 저장소의 원본 파일만 수정합니다. 자동화가 Private의 동일 경로로 복제하므로 Private의 공통 파일을 직접 수정하지 않습니다.</li>
+<li><strong>지원서 보관:</strong> 최종 원본을 Google Drive의 <code>Applications/연도/기업명/</code>에 저장합니다. 자동화가 Private의 Essay Archive에 사본을 만듭니다. Private에 직접 올린 파일이 Google Drive로 역방향 동기화되는 것은 아닙니다.</li>
+<li><strong>상태 확인:</strong> <a href="https://script.google.com/home">Google Apps Script</a> 프로젝트의 <strong>트리거</strong>에서 <code>syncDriveToGitHub</code>가 시간 기반 약 5분 간격으로 등록되어 있는지 확인합니다. <strong>실행</strong> 화면에서 최신 예약 실행 성공 여부와 오류 메시지를 점검하고, 필요한 경우 Private 저장소에서 실제 파일을 확인합니다. 트리거가 있다고 모든 실행이 성공하는 것은 아닙니다.</li>
+<li><strong>오류 대응:</strong> 실패 시 가장 최근의 시간 기반 실행 로그에서 오류 내용을 확인합니다. 인증 오류나 API 호출 한도 초과 등이 발생하면 백업이 지연될 수 있으므로 문제를 해결하기 전 최신 자료가 반영됐다고 가정하지 않습니다. 인증 토큰은 채팅이나 저장소에 공유하지 않습니다.</li>
+<li><strong>ChatGPT 자료 갱신:</strong> GitHub·Drive의 자동 백업은 ChatGPT 프로젝트의 업로드 파일을 갱신하지 않습니다. Common Rules, Master, Writing KB 등 핵심 파일이 수정됐다면 Public에서 최신본을 받아 ChatGPT 프로젝트 자료를 직접 교체합니다. 사용하는 버전을 확인하고, 필요한 이전 지원서 PDF는 Private 또는 Drive에서 해당 채팅에만 첨부합니다.</li>
+</ol>
+<p><strong>중요:</strong> 이 동기화는 Public → Private, Drive → Private 단방향입니다. 삭제·경로 변경·접근 권한 문제는 실행 결과를 확인하고 별도로 관리합니다. 문서 내용 수정이나 새로운 경력 사실의 승인은 여전히 사용자에게 있습니다.</p>
 
 <h2>4. 각 파일은 언제 열까?</h2>
 <table>
