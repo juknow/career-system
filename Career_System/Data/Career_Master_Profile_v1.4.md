@@ -308,6 +308,7 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 
 - 기획 논의 과정에서 말로만 설명할 때 의견이 반복적으로 뒤집히는 문제 경험
 - 프로토타입을 빠르게 제작해 실제 플레이 가능한 결과물을 공통 기준으로 사용
+- **[지원서 원문 교차확인]** LG CNS 지원서에서도 말로만 설득하지 않고 직접 플레이 가능한 빌드를 만들어 의사결정 기준을 맞춘 경험으로 서술됨
 - 출시 후 개선 방향에서도 사용자 데이터와 리뷰를 의사결정 근거로 활용
 
 ### 관련 구현·활동 근거 요약
@@ -376,6 +377,16 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 - 의사결정 시스템 특성상 속도보다 정확성과 충분한 검증이 중요하다고 판단
 - 개발 현황과 추가 검증 필요성을 이해관계자에게 설명
 - 배포 일정을 재조율
+
+### Reliability / Integrity Design
+
+**[지원서 원문 확인 — 독립 구현 근거 재확인 전 확정 승격 금지]**
+
+- 투표자의 직책·역할에 따른 권한과 출석 상태에 따른 투표 자격을 분리해 처리했다고 한국산업은행 지원서에 기록
+- 동일 사용자의 중복투표를 데이터베이스 제약으로 차단하고, 대리 참여 계정까지 포함한 중복투표 방지 조건을 검토했다고 기록
+- 가결 기준을 참석 인원과 설정값에 따라 일관되게 계산하도록 검증했다고 기록
+- 기능별 테스트를 정상 동작·잘못된 입력·경계 조건으로 나누어 계획했다고 기록
+- 위 세부 구현은 원문 서술이 확인된 상태이며 코드·테스트 산출물과의 독립 대조 전에는 기술 사실을 더 확장하지 않는다
 
 ### Outcome
 
@@ -474,6 +485,7 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 - NPC 행동 로직
 - NPC 상태 패턴
 - 게임 내 AI 시스템
+- **[지원서 원문 교차확인]** LIG넥스원 지원서에 Unity/C# 스크립트 구조, NPC AI 행동 패턴 및 상태 전이 로직을 직접 구현한 것으로 기록
 - 플레이어 이동 시스템
 - 플레이어 상호작용 시스템
 - 아이템 상호작용 시스템
@@ -488,6 +500,7 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 - 작업 분배
 - 협업 기준 설정
 - 팀 개발 진행 관리
+- 기획·아트 인력과 기능 요구사항 조율
 - 외부 공모전/출품 컨택
 
 ### Tags
@@ -506,6 +519,7 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 **[확정]**
 
 - 기간: **2026.04.01 ~ 2026.08.31**
+- **[충돌]** LIG넥스원 지원서 원문에는 시작일이 **2026.03.02**로 기재되어 있다. 정확한 시작일은 추가 확인 전 어느 값도 새 지원서에 단정하지 않는다.
 - 팀 규모: 5명
 - 플랫폼: 헬로메이플
 - 대상: 어린이
@@ -534,6 +548,7 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 - 퍼즐 완료/실패 처리 구현
 - 퍼즐 생성 로직 구현
 - 암호화된 형태의 기존 퍼즐 데이터를 해석하여 실제 게임 스테이지 데이터로 변환하는 로직 구현
+- **[과거 지원서 원문 확인]** LIG넥스원 지원서에 스토리 콘텐츠와 **실시간 랭킹 리더보드 시스템**을 구현했다고 기재되어 있다. 직접 구현 범위와 코드 근거를 재확인하기 전에는 `[확정]`으로 승격하지 않는다.
 
 ### Tags
 
@@ -648,6 +663,17 @@ API 비용과 외부 모델 의존도를 줄이기 위한 로컬 실행형 varia
 - 자동 테스트에서 실제 외부 AI provider 호출을 mock 처리
 - 개인정보 보호를 고려하여 usage log에 audio/transcript/prompt/evaluation 본문을 기록하지 않도록 설계
 
+### 2026 KB 지원서에서 보강된 문제 정의·평가 설계
+
+**[혼합 — 저장소 확인 사실과 과거 지원서 서술을 분리]**
+
+- **[지원서 원문]** 혼자 연습할 때 객관적 평가와 재시도 피드백 루프를 만들기 어려운 문제를 제품 출발점으로 설명
+- **[저장소 확인]** 음성 전사, 결정론적 음향 지표, LLM 의미 평가를 분리하고 사용자가 확인한 전사문만 평가에 사용
+- **[저장소 확인]** initial delay, silence ratio, long pause 등 코드로 측정 가능한 지표와 확률적 의미 판단을 구분
+- **[과거 지원서 서술]** 반복어·filler·잘못된 시제·미완성 문장을 보존하도록 전사 프롬프트를 설계하고 WPM까지 별도 추출했다고 기재
+- **[과거 지원서 서술]** 질문 유형별 핵심 요소와 7개 평가 기준을 프롬프트에 구조화했다고 기재. 정확한 7개 기준과 현재 구현 일치 여부는 코드 재확인 전 확정하지 않는다
+- **[저장소 확인]** Pydantic structured output으로 평가 형식을 제한하며, 지원서에는 점수·근거·강점·약점 형식과 서버 재검증을 통해 편차를 줄였다고 설명
+
 ### 관련 구현·활동 근거 요약
 
 - AI application development
@@ -673,244 +699,6 @@ API 비용과 외부 모델 의존도를 줄이기 위한 로컬 실행형 varia
 ### Tags
 
 `#AIApplication` `#LLM` `#STT` `#FastAPI` `#React` `#TypeScript` `#ProductDevelopment` `#FullStack` `#UX` `#EvaluationSystem` `#LocalLLM` `#Privacy` `#Testing`
-
----
-
-## 6.7 ReadLogic
-
-**Experience ID:** `EXP-007`
-
-### Basic
-
-**[확정 — Repository]**
-
-- Repository: https://github.com/juknow/ReadLogic
-- 주요 기준 브랜치: `develop`
-- 형태: **독서 기반 사고력·언어화 훈련 웹앱**
-- 개인 프로젝트
-- 서비스 목적:
-  - 사용자가 읽은 내용을 스스로 구조화
-  - 직접 요약
-  - 말로 설명
-  - 이후 AI가 비교·분석·피드백
-- 핵심 원칙: **AI가 사용자를 대신해 먼저 정답을 제공하지 않음**
-
-### Core Product Loop
-
-**[확정 — Project Context]**
-
-> 20분 독서  
-> → 5분 구조화  
-> → 5분 글 요약  
-> → 3분 말하기  
-> → AI 피드백  
-> → Retry
-
-### Current Implemented Scope
-
-**[확정 — Repository]**
-
-현재 develop 브랜치에서 확인되는 주요 구현은 다음과 같다.
-
-#### Frontend
-
-- React / TypeScript / Vite
-- React Router
-- Home
-- 새 책 등록
-- 내 책 목록
-- 책 상세/편집
-- 페이지 이미지 업로드
-- 책 기본 OCR 언어 설정
-- 페이지별 OCR 언어 override
-- OCR 상태 polling
-- OCR 본문 수동 교정
-- OCR 재인식
-- Vitest / Testing Library 기반 테스트
-
-#### Spring Boot Backend
-
-- Java 21
-- Spring Boot 4.1
-- Spring MVC
-- Spring Data JPA
-- PostgreSQL
-- Flyway
-- MinIO
-- 책/페이지 REST API
-- 이미지 저장
-- 비동기 OCR 작업 관리
-- retry
-- stale OCR job 복구
-- revision 기반 stale 결과 폐기
-- OCR 언어 관리
-- structured OCR JSONB 저장
-- global exception handling
-- Testcontainers 기반 PostgreSQL/MinIO 통합 검증 구조
-
-### Architecture
-
-**[확정 — Repository]**
-
-```text
-React Frontend
-    ↓
-Spring Boot Public API
-    ├─ PostgreSQL
-    ├─ MinIO
-    └─ Python OCR Service
-```
-
-책/페이지의 영속 상태와 OCR 작업 정합성은 Spring Boot가 소유하며, Python OCR service는 무상태 내부 추론 서비스로 분리되어 있다.
-
-### Asynchronous OCR Design
-
-**[확정 — Repository]**
-
-- 신규/교체 페이지는 `PENDING`
-- scheduler가 작업 선점
-- `SELECT ... FOR UPDATE SKIP LOCKED`
-- worker가 MinIO 이미지 로드
-- Python OCR 요청
-- 성공 시 `READY`
-- retryable failure는 지연 후 재시도
-- 최대 실패 시 `FAILED`
-- 오래된 `PROCESSING` 작업 stale recovery
-- `ocrRevision` snapshot을 이용해 처리 중 사용자가 이미지를 바꾸거나 본문을 수정했을 때 오래된 OCR 결과 폐기
-
-### OCR Service
-
-**[확정 — Repository]**
-
-- Python 3.11
-- FastAPI
-- PaddleOCR **PP-OCRv5**
-- PaddlePaddle
-- OpenCV
-- Pillow
-- 내부 전용 무상태 OCR 서비스
-
-#### Supported Languages
-
-- Korean
-- English
-- Japanese
-- Chinese
-- auto routing
-
-#### OCR Pipeline
-
-```text
-Image Validation
-→ EXIF Orientation
-→ Document Orientation
-→ UVDoc Perspective/Curvature Correction
-→ PP-OCRv5 Text Detection
-→ Region Crop
-→ Text-line Orientation
-→ Language-specific Recognition
-→ Reading Order
-→ Paragraph Grouping
-```
-
-#### Models
-
-- document orientation: `PP-LCNet_x1_0_doc_ori`
-- document unwarping: `UVDoc`
-- detection: `PP-OCRv5_server_det`
-- text-line orientation: `PP-LCNet_x1_0_textline_ori`
-- Korean: `korean_PP-OCRv5_mobile_rec`
-- English: `en_PP-OCRv5_mobile_rec`
-- Japanese/Chinese: `PP-OCRv5_server_rec`
-
-#### Structured OCR
-
-결과에 다음 정보를 저장하도록 설계되어 있다.
-
-- 전체 text
-- confidence
-- engine/model
-- requested/detected language
-- 문서 보정 metadata
-- warning
-- paragraph
-- line
-- bbox/polygon
-- detection/recognition confidence
-- language/model
-
-### Quality Preservation
-
-**[확정 — Repository]**
-
-다국어 확장 과정에서 기존 한국어 인식 품질을 유지하기 위한 별도 전략이 존재한다.
-
-- language 미지정 시 Korean 기본
-- Korean 전용 recognizer 유지
-- high-confidence Hangul line은 다른 model이 임의 교체하지 못하도록 제한
-- golden Korean baseline
-- CER / character accuracy
-- reading-order accuracy
-- paragraph boundary F1
-- 실제 model smoke test
-
-### Product Philosophy
-
-**[확정 — Project Context]**
-
-ReadLogic은 “AI가 대신 요약하는 앱”이 아니라 사용자가 직접 생각하고 표현하도록 훈련시키는 도구로 설계된다.
-
-AI는 이후 다음 역할을 수행할 계획이다.
-
-- 원문 이해
-- 사용자 구조화 답변 평가
-- 글 요약 평가
-- 말하기 평가
-- 누락/논리/표현 피드백
-- Retry Mission 생성
-
-### Current Development Phase
-
-**[확정 — Repository Context]**
-
-- Frontend foundation/Home: 완료
-- Book Library/Registration/Page Management: 완료
-- Spring Boot/PostgreSQL/MinIO integration: 완료
-- Async Korean Page OCR: 완료
-- Multilingual / Document Correction / Structured Paragraph OCR: 현재 구현·개선 범위
-- Reading session / structure / summary / speaking / STT / AI feedback / retry / history: 후속 단계
-
-### 관련 구현·활동 근거 요약
-
-- Full-stack architecture
-- Spring Boot backend
-- React frontend
-- REST API design
-- PostgreSQL/Flyway
-- Object storage(MinIO)
-- 비동기 작업 설계
-- concurrency / retry / stale recovery
-- OCR
-- FastAPI
-- PaddleOCR
-- multilingual processing
-- document preprocessing
-- data lifecycle / revision consistency
-- automated testing
-- product architecture documentation
-
-### Status / Limits
-
-**[미확인]**
-
-- 실제 외부 사용자 수
-- 프로덕션 배포 여부
-- 독서 학습 루프 전체 완성 시점
-- 실제 학습 성과 데이터
-
-### Tags
-
-`#FullStack` `#React` `#TypeScript` `#Java` `#SpringBoot` `#PostgreSQL` `#MinIO` `#FastAPI` `#Python` `#OCR` `#PaddleOCR` `#ComputerVision` `#AsyncProcessing` `#Architecture` `#Testing` `#Product` `#AIApplication`
 
 ---
 
@@ -963,6 +751,16 @@ AI는 이후 다음 역할을 수행할 계획이다.
 - 신입회원 지원자 수: 약 **60명 → 100명**
 - 약 120명 이상 규모의 동아리 운영 경험
 
+### 2026 지원서 원문에서 확인된 추가 운영 서술
+
+**[지원서 원문 확인 — 비교기간·산식·독립 증빙 미확인]**
+
+- KT 지원서: 재등록률 **45% → 68%**, 교육 세션 **5개 → 10개**
+- KT 지원서: 공식 홈페이지 방문자 약 **+30%**, 조회수 약 **+27%**
+- KT 지원서: 내부 멘토 섭외, 졸업 선배와의 만남, 기업 후원·오피스 투어, 타 대학 연합 해커톤, BlendED 연수·장학 기회 연결 및 1명 선발
+- GS칼텍스 지원서: 현업 알럼나이를 멘토로 연결해 커피챗·취업 조언 기회를 제공하고, 선배 후원금으로 세션 진행자 보조금을 지급했다고 서술
+- 위 수치와 활동은 원문에 존재한다는 점만 확인된 상태다. 비교연도·분모·분석 기간·본인 직접 기여 범위가 확인되기 전에는 `[확정]` 성과로 승격하지 않는다
+
 ### Tags
 
 `#Leadership` `#OrganizationManagement` `#PM` `#Communication` `#StakeholderManagement` `#ExternalRelations` `#Planning`
@@ -1008,20 +806,10 @@ AI는 이후 다음 역할을 수행할 계획이다.
 ### TypeScript
 
 - OPIc AI Coach
-- ReadLogic
-
-### Java / Spring Boot
-
-- ReadLogic 백엔드: REST API, JPA, PostgreSQL, Flyway 및 비동기 작업 관리
 
 ### Python / FastAPI
 
 - OPIc AI Coach 백엔드
-- ReadLogic의 Python 기반 내부 서비스
-
-### PostgreSQL
-
-- ReadLogic의 영속 데이터 처리 및 Spring Boot 연동
 
 ### AI / LLM Integration
 
@@ -1032,11 +820,6 @@ AI는 이후 다음 역할을 수행할 계획이다.
 
 - OpenAI transcription, faster-whisper 연동
 - 브라우저 음성 지표 분석
-
-### 영상·문서 처리 관련 기술
-
-- OpenCV 기반 이미지·문서 전처리
-- 문서 방향 보정, 다국어 인식 흐름, 읽기 순서·문단 구조 처리
 
 ---
 
@@ -1065,10 +848,9 @@ AI는 이후 다음 역할을 수행할 계획이다.
 | JavaScript | 3 / 5 | KUCC 웹 개발 및 개인 웹 프로젝트 |
 | React | 3 / 5 | 웹 화면·상태 관리 및 서비스 구현 |
 | AWS | 2 / 5 | 클라우드 사용 경험에 대한 지원서 자기평가; 서비스별 직접 작업 범위는 별도 확인 |
-| PostgreSQL | 2 / 5 | 개인 웹앱 백엔드의 데이터 저장·연동 |
 | Figma | 2 / 5 | 디자인 도구 활용에 대한 지원서 자기평가; 구체적 산출물은 별도 확인 |
 
-Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 자기평가 별점이 기재되지 않은 기술에는 임의의 점수를 부여하지 않는다.
+TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 자기평가 별점이 기재되지 않은 기술에는 임의의 점수를 부여하지 않는다.
 
 ---
 
@@ -1079,7 +861,7 @@ Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 �
 | 근거 범주 | 확인할 원본 절 |
 |---|---|
 | 실제 출시/운영 프로젝트 | §6.1 Dr. COG, §6.2 전자투표, §6.3 KUCC 홈페이지, §6.4 Gimme Books!, §6.5 헬로메이플 |
-| AI·웹 애플리케이션 개인 구현 | §6.6 OPIc AI Coach, §6.7 ReadLogic |
+| AI·웹 애플리케이션 개인 구현 | §6.6 OPIc AI Coach |
 | 조직 운영 및 대외 협업 | §7 KUCC |
 | 기술별 실사용/프로젝트/학습 수준 | §8 Technical Skills |
 
@@ -1093,7 +875,6 @@ Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 �
 - **[확정]** 영어 OPIc IM2. 직무별 요구 수준과의 비교는 공고 조사 시 수행한다.
 - **[현재 증거 부족]** 논문, 독립적인 모델 학습 연구, 대규모 ML 파이프라인을 주도했다는 근거.
 - **[현재 증거 부족]** 대규모 실서비스 트래픽, 프로덕션 운영 장애 대응, 프로덕션 관측성, 분산 시스템 운영 이력.
-- **[기존 구현 근거 존재]** ReadLogic의 Spring Boot/PostgreSQL/Flyway/MinIO 및 비동기 OCR 작업 구현은 §6.7 및 §8에서 확인한다.
 
 ---
 
@@ -1128,6 +909,10 @@ Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 �
 | KUCC | 123명 | 동아리 규모 |
 | KUCC | 13명 | 운영진 규모 |
 | KUCC | 60 → 100명 | 신입 지원자 수 변화 |
+| KUCC | 45% → 68% | 재등록률; KT 지원서 원문, 비교기간·산식 미확인 |
+| KUCC | 5개 → 10개 | 교육 세션; KT 지원서 원문, 비교기간 미확인 |
+| KUCC 홈페이지 | 약 +30% | 방문자; KT 지원서 원문, 분석 기간·도구 미확인 |
+| KUCC 홈페이지 | 약 +27% | 조회수; KT 지원서 원문, 분석 기간·도구 미확인 |
 | 어린이 교육 게임 | 약 3,100명 | 플레이어 |
 | 어린이 교육 게임 | 36 | 좋아요 |
 | KRAFTON Jungle Game Lab | **2,400시간** | 교육시간 |
@@ -1181,17 +966,13 @@ Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 �
 - [미확인] 사용자가 직접 설계/구현한 범위를 코드 전체와 동일시해도 되는지
 - [미확인] API 버전과 local-LLM variant 중 어떤 것이 포트폴리오 대표 버전인지
 
-## ReadLogic
-
-- [미확인] 프로젝트 시작일
-- [미확인] 현재 production 배포 여부
-- [미확인] 실제 외부 사용자 수
-- [미확인] Spring/OCR 구현에서 AI 개발 도구와 본인 수작업의 경계 및 본인 최종 설계 책임 범위
-
 ## KUCC
 
-- [미확인] 홈페이지 방문자·조회수 2024/2025/2026 확정 지표
+- [미확인] 재등록률 45→68의 비교기간·분모·산식
+- [미확인] 교육 세션 5→10의 정확한 비교기간과 세션 정의
+- [미확인] 홈페이지 방문자 +30%·조회수 +27%의 분석 기간·도구·기준값
 - [미확인] 신입 지원자 60→100의 정확한 비교연도
+- [미확인] 알럼나이 멘토·후원금 기반 보조금의 시행 횟수·금액·본인 집행 범위
 
 ---
 
@@ -1229,21 +1010,5 @@ Representative files reviewed:
 - `frontend/src/App.tsx`
 - `frontend/src/services/httpCoachService.ts`
 - `frontend/src/services/audioAnalysisService.ts`
-
-### ReadLogic
-
-- https://github.com/juknow/ReadLogic/tree/develop
-
-Representative files reviewed:
-
-- `READLOGIC_PROJECT_CONTEXT.md`
-- `backend/README.md`
-- `backend/ARCHITECTURE.md`
-- `backend/build.gradle`
-- `frontend/ARCHITECTURE.md`
-- `frontend/package.json`
-- `ocr-service/README.md`
-- `ocr-service/ARCHITECTURE.md`
-- `ocr-service/pyproject.toml`
 
 ---
