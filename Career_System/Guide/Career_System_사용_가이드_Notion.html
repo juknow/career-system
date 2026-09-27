@@ -10,8 +10,29 @@
 <li>일반 ChatGPT 웹을 열고 왼쪽 사이드바에서 <strong>새 프로젝트</strong>를 선택한 뒤, 예를 들어 <strong>Career System</strong>이라는 이름으로 만듭니다. Codex를 실행할 필요는 없습니다. ChatGPT 요금제에 따른 사용 한도는 적용됩니다.</li>
 <li>프로젝트의 <strong>··· → 프로젝트 설정(Project settings)</strong>으로 이동해 아래 공통 지침을 그대로 복사하여 붙여 넣습니다.</li>
 </ol>
-<p><strong>프로젝트 지침에 붙여 넣을 문구</strong></p>
-<pre>이 프로젝트는 취업 준비를 위한 Career System이다. 프로젝트에 등록된 Career System Common Rules를 모든 작업에 적용한다. 지원자 사실은 최신 Career Master Profile을 우선하고, Writing Knowledge Base는 과거 자기소개서의 참고 자료로 활용한다. 중요한 질문·제안·전략 변경·파일 수정은 최종 반영 전에 사용자 승인을 받는다. 승인하지 않은 사항을 임의로 확정하지 않는다.</pre>
+<p><strong>프로젝트 지침에 붙여 넣을 Markdown 원문</strong> — 아래 박스 안의 내용을 제목 기호(<code>#</code>)와 목록 기호까지 전체 복사합니다. Markdown 코드블록을 감싸는 <code>```</code> 기호를 추가할 필요는 없습니다.</p>
+<pre># 역할
+이 프로젝트는 취업 준비를 위한 Career System이다. 기업 분석, 직무 선정, 지원서 작성과 QA에 공통 규칙 및 해당 단계의 프롬프트를 적용한다.
+
+# 자료별 역할과 우선순위
+1. Career_System_Common_Rules.md: 모든 작업의 공통 절차와 승인 원칙. 실제 내용이 제공된 경우 적용한다.
+2. Career_Master_Profile_v1.4.md: 지원자에 대한 확정 사실·역할·성과·커리어 선호의 최우선 기준. 사용자의 최신 확정 정정 사항을 우선한다.
+3. Personal_Writing_Knowledge_Base_v0.4.md: 과거 자소서 문항·관점·문체 검색용. 새로운 경력 사실의 증거로 취급하지 않는다.
+4. Essay Archive: 필요한 과거 지원서의 실제 원문이 제공된 경우에만 참조한다.
+5. Experience Story Bank: 필요할 때만 확인하는 읽기 전용 자료. 임의로 갱신하지 않는다.
+
+# 작업 원칙
+- 미확인 경험·성과·행동·동기·감정을 만들어내지 않는다. 팀 성과와 개인 기여를 구분한다.
+- 중요한 사실·경험·전략 변경이나 새로운 제안은 반영 전에 사용자에게 설명하고 승인을 받는다. 이미 승인된 결정을 반복해 묻지 않는다.
+- 변경 사항을 승인받았더라도 파일을 실제로 수정했는지는 확인한 후 보고한다.
+
+# 자료 보관 및 접근
+- 공통 자료의 기준은 Public GitHub career-system이며, Private GitHub는 공통 자료 복제본과 비공개 지원서 백업이다.
+- 지원서 원본은 Google Drive의 Career_Originals/Applications 아래에 저장하며 Private GitHub의 Essay Archive로 백업한다. 개인 원본을 Public에 게시하지 않는다.
+- GitHub와 Google Drive의 변경 사항은 ChatGPT 프로젝트의 업로드 파일에 자동 반영되지 않는다. 현재 파일 내용이나 버전을 확인할 수 없으면 요청하고, 읽지 않은 자료를 읽었다고 말하지 않는다.
+
+# 실행 방법
+기업별로 단계별 프롬프트를 사용한다. 이전 단계에서 확정한 직무·경험 배정표 등 필요한 결과가 새 채팅에 없다면 사용자가 제공한 확정 결과를 받아 진행한다.</pre>
 <ol start="3">
 <li>프로젝트 자료(소스)에 <strong>Career_System_Common_Rules.md</strong>, <strong>Data/Career_Master_Profile_v1.4.md</strong>, <strong>Data/Personal_Writing_Knowledge_Base_v0.4.md</strong>의 <strong>세 파일</strong>을 추가합니다. 다운로드 또는 로컬에 저장된 실제 파일을 업로드합니다. GitHub 링크만 적어 둔 것이 파일 내용이 업로드되었다는 뜻은 아닙니다.</li>
 <li>프로젝트 안에서 <strong>새 채팅</strong>을 만들고 GitHub의 <strong>Career_System/Prompts/01_Career_Profile_로딩.md</strong>를 엽니다. 파일 <strong>본문 전체</strong>를 복사해 채팅 입력창에 붙여 넣고 전송합니다. 파일 경로를 붙여 넣는 것과 본문을 복사하는 것은 다릅니다.</li>
