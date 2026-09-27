@@ -48,7 +48,7 @@
 - GitHub·로컬·Google Drive의 파일과 ChatGPT 프로젝트에 업로드한 파일이 자동으로 동일해진다고 가정하지 않는다. 중요 원본은 필요한 때에 해당 채팅에 직접 제공하며, 프로젝트 공통 자료를 갱신할 때는 현재 파일의 버전을 확인한다.
 
 ## 7. 파일의 위치와 클라우드 백업
-- **공개 기준 자료:** `juknow/career-system`의 `Career_System/`에 공통 규칙, Master Profile, Writing KB, 동결된 Story Bank, 프롬프트, 가이드, Review를 둔다. 확정된 공통 자료의 수정은 사용자 사전 승인 후 공개 저장소의 해당 파일에서 수행한다.
+- **공개 기준 자료:** `juknow/career-system`의 `Career_System/`에 공통 규칙, Master Profile, Writing KB, Story Bank, 프롬프트, 가이드, Review를 둔다. 확정된 공통 자료의 수정은 사용자 사전 승인 후 공개 저장소의 해당 파일에서 수행한다.
 - **비공개 원본:** 자기소개서와 지원서 원본은 Google Drive의 `Career_Originals/Applications/연도/기업명/`에서 관리한다. 자동 백업 시 `juknow/career-system-private`의 `Career_System/Data/Essay_Archive/연도/기업명/`에 복사된다. 원본을 공개 저장소에 게시하지 않는다.
 - **비공개 공통 자료 복제:** 자동화는 공개 저장소의 공통 파일을 비공개 저장소의 **동일한 경로**로 복제한다. 공통 자료는 공개 저장소를 기준으로 관리하며, 비공개 복제본을 직접 수정해 충돌을 만들지 않는다. 비공개 전용 Essay Archive는 별도로 보존한다.
 - **실행 방식:** Google Apps Script에서 대략 5분 간격으로 공개 자료 및 Google Drive 변경을 점검해 비공개 저장소로 백업한다. 예약 실행의 성공 여부와 오류는 Apps Script의 트리거·실행 기록에서 확인한다. 자동화가 실패하면 최신 복제 여부를 확인한 뒤 필요한 작업을 수행하며, 백업이 항상 즉시 완료된 것으로 가정하지 않는다.
