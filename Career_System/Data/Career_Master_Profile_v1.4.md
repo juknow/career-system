@@ -971,45 +971,39 @@ AI는 이후 다음 역할을 수행할 계획이다.
 
 # 8. Technical Skills — Evidence Level
 
-## 8.1 Level A — 실제 제품/실사용 서비스에서 반복 사용
+> 이 절은 실제 사용 근거와 과거 지원서에 기재한 **본인 평가 활용 수준**을 구분한다. 자기평가 별점은 외부 검증된 숙련도나 모든 기술에 일괄 적용할 등급이 아니다. 해당 직무의 지원서에서는 요구 기술에 맞는 근거와 수준만 선택한다.
+
+## 8.1 Level A — 실제 제품·운영 서비스·공개 결과물에서 사용
 
 ### C# / Unity
 
-**근거**
+- Dr. COG — Unity/C# 기반 Steam 상용 출시
+- Gimme Books! — Unity/C# 기반 STOVE 공개 및 공모전 전시
+- Unity는 상용 게임 개발·기획·QA·출시 과정에서 반복 사용
 
-- Dr. COG — Steam 상용 출시
-- Gimme Books! — STOVE 및 공모전 전시
-- 헬로메이플 어린이 교육 게임 — 약 3,100명 플레이
+### Lua
 
-**평가:** 현재 가장 강한 개발 기술 증거 중 하나.
+- 헬로메이플 교육 게임 — Maple World 기반 게임 규칙, 스토리·무한모드 및 퍼즐 로직 구현
 
-### React
+### React / JavaScript
 
-**근거**
-
-- KUCC 공식 홈페이지
-- 전자투표 시스템
-- OPIc AI Coach
-- ReadLogic
+- KUCC 공식 홈페이지 — 프론트엔드 및 관리자 기능 구현
+- 전자투표 시스템 — 사용자 요구를 반영한 서비스 개발
+- 개인 웹앱에서도 React 활용
 
 ### Firebase
-
-**근거**
 
 - KUCC 공식 홈페이지
 - 전자투표 시스템
 
 ### Git / GitHub
 
-**근거**
-
-- 다수 팀 개발 프로젝트
-- Gimme Books! 기능 단위 협업
-- 개인 프로젝트 branch/PR 기반 개발
+- 다수의 팀·개인 개발 프로젝트에서 형상관리
+- 브랜치 기반 작업, Commit·PR을 통한 협업 및 버전 관리
 
 ---
 
-## 8.2 Level B — 실제 개인 프로젝트 구현 근거 있음
+## 8.2 Level B — 개인 프로젝트의 구현·연동 근거
 
 ### TypeScript
 
@@ -1018,61 +1012,63 @@ AI는 이후 다음 역할을 수행할 계획이다.
 
 ### Java / Spring Boot
 
-- ReadLogic backend
-- REST API
-- JPA
-- PostgreSQL
-- Flyway
-- MinIO
-- 비동기 OCR job orchestration
+- ReadLogic 백엔드: REST API, JPA, PostgreSQL, Flyway 및 비동기 작업 관리
 
 ### Python / FastAPI
 
-- OPIc AI Coach backend
-- ReadLogic OCR service
+- OPIc AI Coach 백엔드
+- ReadLogic의 Python 기반 내부 서비스
+
+### PostgreSQL
+
+- ReadLogic의 영속 데이터 처리 및 Spring Boot 연동
 
 ### AI / LLM Integration
 
-- OpenAI API
-- Ollama
-- structured output
-- prompt/evaluation flow
-- local LLM
-- retry/cache/readiness
+- OpenAI API 및 Ollama 연동
+- 구조화된 출력, 평가·프롬프트 흐름, 로컬 LLM, 재시도·캐시·준비 상태 관리
 
 ### Speech / STT
 
-- OpenAI transcription
-- faster-whisper
+- OpenAI transcription, faster-whisper 연동
 - 브라우저 음성 지표 분석
 
-### OCR / CV
+### 영상·문서 처리 관련 기술
 
-- PaddleOCR PP-OCRv5
-- OpenCV
-- document orientation
-- UVDoc
-- multilingual recognition
-- reading order
-- paragraph grouping
+- OpenCV 기반 이미지·문서 전처리
+- 문서 방향 보정, 다국어 인식 흐름, 읽기 순서·문단 구조 처리
 
 ---
 
-## 8.3 Level C — Coursework / Academic Foundation
+## 8.3 Level C — 수업·실습 및 학업 기반
 
-- C/C++
-- Algorithm
-- Data Structures
-- Operating Systems
-- Computer Architecture
-- System Programming
-- Computer Network
-- AI / ML
-- Data Science
+- C: 운영체제·시스템 프로그래밍 과제에서 사용한 경험을 과거 지원서에 기재
+- C++: 학습·수업 기반. 별도 완성 프로젝트 수준은 추가 확인 필요
+- 알고리즘, 자료구조, 운영체제, 컴퓨터구조, 시스템 프로그래밍, 컴퓨터네트워크
+- 인공지능·기계학습, 데이터과학
 
-수업 이수 사실과 실무 숙련도는 별개로 취급한다.  
-이 Level은 `배운 적이 있음 / 학업 기반이 있음`을 의미하며, 주도성·프로젝트 ownership·실전 성과를 의미하지 않는다.  
-Level A/B의 실제 구현 경험과 같은 가중치로 평가하지 않고, 자기소개서의 핵심 경험 후보로 자동 추천하지 않는다.
+수업 기반 경험은 제품 배포·운영 근거와 구분한다. 수업 이수만으로 전문성이나 실무 숙련도를 확정하지 않는다.
+
+---
+
+## 8.4 기존 지원서에 기재한 IT 활용 능력 자기평가
+
+> 아래 수준은 현대엘리베이터 지원서에 사용자가 직접 기재한 5점 만점 **자기평가**다. 프로젝트 근거가 있는 기술도 별점을 실제 업무 숙련도 인증으로 해석하지 않는다.
+
+| 기술 | 당시 자기평가 | 근거 또는 사용 범위 |
+|---|---:|---|
+| Unity | 5 / 5 | 상용 게임 및 전시 게임 개발 |
+| Git / GitHub | 4 / 5 | 개인·팀 프로젝트 형상관리 및 협업 |
+| C# | 4 / 5 | Unity 게임 로직·UI·시스템 개발 |
+| Microsoft Excel | 4 / 5 | 지원서상 업무용 소프트웨어 활용 자기평가; 구체적 활용 사례는 추가 확인 가능 |
+| Python | 3 / 5 | AI 코칭 웹앱 백엔드 등 개인 프로젝트 |
+| JavaScript | 3 / 5 | KUCC 웹 개발 및 개인 웹 프로젝트 |
+| React | 3 / 5 | 웹 화면·상태 관리 및 서비스 구현 |
+| AWS | 2 / 5 | 클라우드 사용 경험에 대한 지원서 자기평가; 서비스별 직접 작업 범위는 별도 확인 |
+| PostgreSQL | 2 / 5 | 개인 웹앱 백엔드의 데이터 저장·연동 |
+| Figma | 2 / 5 | 디자인 도구 활용에 대한 지원서 자기평가; 구체적 산출물은 별도 확인 |
+
+Java·Spring Boot·TypeScript·Lua·Firebase·FastAPI·OpenAI API·Ollama 등 자기평가 별점이 기재되지 않은 기술에는 임의의 점수를 부여하지 않는다.
 
 ---
 
