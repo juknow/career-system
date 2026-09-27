@@ -1,6 +1,6 @@
 # Career Master Profile 로딩 지침
 
-앞으로 **이 대화와 이 대화에서 분기되는 채팅**에서는 `Career_Master_Profile_v1.4.md`를 나에 대한 지원자 기준 데이터로 사용해라. `Personal_Writing_Knowledge_Base_v0.4.md`는 과거 자기소개서·인사이트 검색 자료로 함께 읽되 사실의 원본으로 취급하지 마라.
+앞으로 **이 대화와 이 대화에서 분기되는 채팅**에서는 `Career_Master_Profile.md`를 나에 대한 지원자 기준 데이터로 사용해라. `Personal_Writing_Knowledge_Base.md`는 과거 자기소개서·인사이트 검색 자료로 함께 읽되 사실의 원본으로 취급하지 마라.
 
 가능하면 `Career_System_Common_Rules.md`도 읽어라. 공통 파일을 읽을 수 없는 독립 채팅이더라도 **작업 전 질문·개선 제안 → 사용자 승인 → 승인 범위 실행 → 변경 내역 보고** 순서를 반드시 지켜라. 사용자 승인 없이 주요 사실, 전략, 파일을 수정하지 마라. 현재 동결된 Experience Story Bank는 사용자가 별도로 필요하다고 할 때에만 기존 내용을 읽으며 갱신하지 않는다.
 
@@ -63,4 +63,4 @@ Writing KB는 과거 글 검색에 사용할 보조 자료로 로딩했는지 �
 
 **공통 승인 절차:** 새 제안/확인 질문/자료 충돌이 있으면 최종 작업 전 먼저 제시한다. 사용자 결정 전에는 경력 사실, 인사이트, 시스템 파일을 임의 변경하지 마라.
 
-**기본 첨부:** `Career_System_Common_Rules.md`, `Career_Master_Profile_v1.4.md`, `Personal_Writing_Knowledge_Base_v0.4.md`.
+**기본 첨부:** `Career_System_Common_Rules.md`, `Career_Master_Profile.md`, `Personal_Writing_Knowledge_Base.md`.
