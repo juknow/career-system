@@ -16,13 +16,17 @@
 
 ## 사용 순서
 
-1. 공통 규칙과 최신 Career Master Profile, Writing Knowledge Base를 준비합니다.
-2. [`01_Career_Profile_로딩`](Career_System/Prompts/01_Career_Profile_로딩.md)으로 기준 정보를 설정합니다.
-3. 필요할 때만 [`02_지원가치_판단_중복지원_선택`](Career_System/Prompts/02_지원가치_판단_중복지원_선택.md)을 실행합니다.
-4. [`03_최종_직무_선정`](Career_System/Prompts/03_최종_직무_선정.md)으로 지원 직무를 결정합니다.
-5. [`04_지원서_전체_전략`](Career_System/Prompts/04_지원서_전체_전략.md)에서 문항별 경험을 배정합니다.
-6. [`05_자소서_단일_문항_작성`](Career_System/Prompts/05_자소서_단일_문항_작성.md)을 문항별로 실행합니다.
-7. [`06_지원서_전체_QA`](Career_System/Prompts/06_지원서_전체_QA.md)로 제출 전 전체를 검수합니다.
+**처음 한 번:** ChatGPT 웹의 Career System 프로젝트 지침을 등록하고 최신 Common Rules, Career Master Profile, Writing Knowledge Base를 프로젝트 소스에 추가합니다. Story Bank는 필요한 경우에만 참고하는 선택 자료입니다. 기존 `01_Career_Profile_로딩` 파일은 보존하지만 프로젝트 내부에서는 매번 실행하지 않습니다.
+
+**기업별 작업:**
+
+1. 필요할 때만 [`02_지원가치_판단_중복지원_선택`](Career_System/Prompts/02_지원가치_판단_중복지원_선택.md)을 실행합니다.
+2. [`03_최종_직무_선정`](Career_System/Prompts/03_최종_직무_선정.md)으로 지원 직무를 확정합니다.
+3. [`04_지원서_전체_전략`](Career_System/Prompts/04_지원서_전체_전략.md)에서 문항별 경험을 배정합니다.
+4. [`05_자소서_단일_문항_작성`](Career_System/Prompts/05_자소서_단일_문항_작성.md)을 문항별로 실행합니다.
+5. [`06_지원서_전체_QA`](Career_System/Prompts/06_지원서_전체_QA.md)로 제출 전 전체를 검수합니다.
+
+새 채팅에 이전 단계의 확정 결과가 없다면 확정 직무·문항별 경험 배정표의 해당 내용 등을 직접 전달합니다. 프로젝트 공통 파일은 접근 가능하면 반복 첨부하지 않아도 됩니다.
 
 자세한 초기 설정 및 사용 방법은 [사용 가이드](Career_System/Guide/Career_System_사용_가이드_Notion.html)를 참고합니다.
 
