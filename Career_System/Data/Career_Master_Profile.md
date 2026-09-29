@@ -1,8 +1,8 @@
 # Career Master Profile
 
 > **Purpose:** 취업 준비를 위한 지원자 사실 데이터베이스(Single Source of Truth)  
-> **Version:** 1.4
-> **Last Updated:** 2026-09-27
+> **Version:** 1.5
+> **Last Updated:** 2026-09-29
 > **프로젝트 코드 근거 확인일:** 2026-09-20
 > **Owner:** 문준호  
 >
@@ -341,6 +341,15 @@ AI/ML 관련 과목 이수는 학업 배경이다. 실제 구현 이력은 각 �
 - 역할: **PM + 개발**
 - 실제 사용자: **97명의 대표자**
 - 실제 회의에 정식 도입
+
+### Technical Stack
+
+**[확정 — 2026-09-29 사용자 직접 확인]**
+
+- 프론트엔드: **React**
+- 백엔드: **Node.js / Express (REST API)**
+- 데이터베이스: **PostgreSQL**
+- **Firebase는 전자투표 시스템에서 사용하지 않음.** Firebase 경험은 별도 KUCC 공식 홈페이지 프로젝트(§6.3)에만 연결한다.
 
 ### Problem
 
@@ -792,7 +801,10 @@ API 비용과 외부 모델 의존도를 줄이기 위한 로컬 실행형 varia
 ### Firebase
 
 - KUCC 공식 홈페이지
-- 전자투표 시스템
+
+### Node.js / Express / PostgreSQL
+
+- 전자투표 시스템: 사용자 확인 기술 스택(React 프론트엔드 / Node.js·Express REST API / PostgreSQL 데이터베이스)
 
 ### Git / GitHub
 
