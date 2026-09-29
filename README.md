@@ -16,7 +16,7 @@
 
 ## 사용 순서
 
-**처음 한 번:** ChatGPT 웹의 Career System 프로젝트 지침을 등록하고, 아래 **네 개의 MD 파일을 모두 프로젝트 소스에 등록**합니다. Story Bank는 등록 필수이지만 구체적인 사건을 확인할 때만 참조하며, 별도 승인 없이 내용을 수정하지 않습니다. Google Drive의 지원서 원본 폴더도 연결합니다. 기존 `01_Career_Profile_로딩` 파일은 보존하지만 프로젝트 내부에서는 매번 실행하지 않습니다.
+**처음 한 번:** ChatGPT 웹의 Career System 프로젝트 지침을 등록하고, 아래 **네 개의 MD 파일을 모두 프로젝트 소스에 등록**합니다. Story Bank는 등록 필수이지만 구체적인 사건을 확인할 때만 참조하며, 별도 승인 없이 내용을 수정하지 않습니다. Google Drive의 지원서 원본 폴더도 연결합니다. 별도 프로필 로딩 파일은 삭제하였으며 각 단계에서 등록된 네 파일의 최신본을 확인합니다.
 
 **프로젝트 소스 초기 등록 목록**
 
@@ -30,11 +30,11 @@ GitHub·Google Drive의 변경 사항은 프로젝트 소스의 등록 파일을
 
 **기업별 작업:**
 
-1. 필요할 때만 [`02_지원가치_판단_중복지원_선택`](Career_System/Prompts/02_지원가치_판단_중복지원_선택.md)을 실행합니다.
-2. [`03_최종_직무_선정`](Career_System/Prompts/03_최종_직무_선정.md)으로 지원 직무를 확정합니다.
-3. [`04_지원서_전체_전략`](Career_System/Prompts/04_지원서_전체_전략.md)에서 문항별 경험을 배정합니다.
-4. [`05_자소서_단일_문항_작성`](Career_System/Prompts/05_자소서_단일_문항_작성.md)을 문항별로 실행합니다.
-5. [`06_지원서_전체_QA`](Career_System/Prompts/06_지원서_전체_QA.md)로 제출 전 전체를 검수합니다.
+0. **선택:** 필요할 때만 [`00_지원가치_판단_중복지원_선택`](Career_System/Prompts/00_지원가치_판단_중복지원_선택.md)을 실행합니다.
+1. [`01_최종_직무_선정`](Career_System/Prompts/01_최종_직무_선정.md)으로 지원 직무를 확정합니다.
+2. [`02_지원서_전체_전략`](Career_System/Prompts/02_지원서_전체_전략.md)에서 문항별 경험을 배정합니다.
+3. [`03_자소서_단일_문항_작성`](Career_System/Prompts/03_자소서_단일_문항_작성.md)을 문항별로 실행합니다.
+4. [`04_지원서_전체_QA`](Career_System/Prompts/04_지원서_전체_QA.md)로 제출 전 전체를 검수합니다.
 
 새 채팅에 이전 단계의 확정 결과가 없다면 확정 직무·문항별 경험 배정표의 해당 내용 등을 직접 전달합니다. 프로젝트 공통 파일은 접근 가능하면 반복 첨부하지 않아도 됩니다.
 
@@ -52,7 +52,7 @@ GitHub·Google Drive의 변경 사항은 프로젝트 소스의 등록 파일을
 
 | 대상 | 원본 / 수정 위치 | 자동 백업 위치 |
 | --- | --- | --- |
-| 공통 규칙·Master·Writing KB·프롬프트·가이드·Review | [Public career-system](https://github.com/juknow/career-system)의 동일 파일 | [Private career-system-private](https://github.com/juknow/career-system-private)의 동일 경로 |
+| 공통 규칙·Master·Writing KB·Story Bank·프롬프트·가이드·Review | [Public career-system](https://github.com/juknow/career-system)의 동일 파일 | [Private career-system-private](https://github.com/juknow/career-system-private)의 동일 경로 |
 | 지원서 PDF·원문 MD/TXT | Google Drive의 `Career_Originals/Applications/연도/기업명/` | Private의 `Career_System/Data/Essay_Archive/연도/기업명/` |
 
 - Google Apps Script의 `syncDriveToGitHub`가 약 5분마다 변경 사항을 확인하는 **단방향** 백업입니다. 작업 성공 여부는 Apps Script의 트리거와 최신 실행 로그에서 확인합니다. 자동화 오류가 발생하면 최신 파일의 반영이 지연될 수 있습니다.

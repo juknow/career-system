@@ -32,7 +32,7 @@
 <ol start="3">
 <li>프로젝트 소스에 <strong>Career_System_Common_Rules.md</strong>, 최신 <strong>Career_Master_Profile.md</strong>, <strong>Personal_Writing_Knowledge_Base.md</strong>, <strong>Experience_Story_Bank.md</strong>의 <strong>네 파일을 모두 등록</strong>합니다. Story Bank는 초기 등록 필수지만 관련 경험을 구체적으로 검토할 때만 참고하고, 사용자 승인 없이 수정하지 않습니다. GitHub 링크만 입력하는 것은 파일 내용을 등록하는 것과 다릅니다.</li>
 <li>같은 프로젝트의 <strong>소스 추가</strong>에서 <a href="https://drive.google.com/drive/folders/1H6306HKrzjMN5e_8-DO49w8pH0Lepuc-">Google Drive Career_Originals/Applications 폴더</a> 링크를 추가합니다. 요청이 표시되면 Google Drive 앱 접근 권한을 승인합니다. 폴더 연결만으로 원문 전체가 자동 동기화되거나 읽히지는 않으며 필요할 때 해당 파일을 실제 검색·열람합니다. 연결이 안 되면 접근 가능한 Private GitHub 백업이나 해당 채팅에 제공한 원문을 이용합니다.</li>
-<li>프로젝트에 새 기업별 채팅을 만들고 필요하면 선택형 지원 가치 판단부터, 아니면 바로 최종 직무 선정부터 시작합니다. 단계별 프롬프트는 GitHub의 본문 전체를 복사해 사용합니다. 기존 프로필 로딩 파일은 프로젝트 밖 등 공통 파일을 별도로 전달하는 상황에만 선택적으로 활용합니다.</li>
+<li>프로젝트에 새 기업별 채팅을 만들고 필요하면 선택형 지원 가치 판단부터, 아니면 바로 최종 직무 선정부터 시작합니다. 단계별 프롬프트는 GitHub의 본문 전체를 복사해 사용합니다. 별도 프로필 로딩 실행 파일은 삭제되었으며, 프로젝트 초기 등록 자료를 각 실행 단계에서 직접 확인합니다.</li>
 <li>작업을 시작할 때 최신 프로젝트 자료의 접근·버전을 확인합니다. 파일이 없거나 오래됐다면 소스를 갱신합니다. 새 채팅에서 이전 결정이 보이지 않으면 확정한 결과만 함께 전달합니다.</li>
 </ol>
 <p><strong>현재 프롬프트 위치:</strong> <a href="https://github.com/juknow/career-system/tree/main/Career_System/Prompts">GitHub의 프롬프트 폴더</a>. GitHub에서 파일을 열고 원문(Raw)을 보거나 본문을 복사하면 됩니다.</p>
@@ -52,31 +52,31 @@
 <h2>2. 기업별 실제 사용 순서</h2>
 <p><strong>공통 실행 방법:</strong> 해당 단계의 GitHub 프롬프트 파일을 열고 본문 전체를 복사 → 같은 프로젝트 안의 작업 채팅에 붙여 넣기 → 중괄호 안의 변수에 실제 회사명·공고 URL·질문 등을 입력 → 필요한 첨부를 추가 → 실행합니다. 문항 작성은 해당 기업의 전략 채팅에서 분기하거나 새 채팅으로 시작할 수 있습니다. 새 채팅에서 앞선 결정이 보이지 않으면 확정한 직무와 배정표의 해당 행을 직접 전달합니다.</p>
 <p>ChatGPT는 각 신규 작업을 이해한 대로 먼저 설명하고, 사용자의 명시적 승인 후 실행합니다. 이전에 승인된 하위 작업에는 같은 승인을 반복하지 않습니다.</p>
-<p><strong>프로필 로딩 단계는 반복하지 않습니다.</strong> 처음 등록한 프로젝트 공통 자료를 각 단계에서 직접 참고합니다. 기존 <code>01_Career_Profile_로딩.md</code>는 프로젝트 밖에서 별도 파일을 전달해야 하는 경우에만 선택적으로 사용합니다.</p>
+<p><strong>프로필 로딩 실행 파일은 삭제했습니다.</strong> 처음 등록한 프로젝트 공통 네 파일을 각 단계에서 직접 참고하며, Story Bank는 구체적 사건 검토에 필요할 때만 읽습니다.</p>
 
-<h3>선택 단계. 지원 가치 및 중복지원 확인</h3>
-<p><strong>실행 파일:</strong> 02_지원가치_판단_중복지원_선택.md</p>
+<h3>00단계(선택). 지원 가치 및 중복지원 확인</h3>
+<p><strong>실행 파일:</strong> 00_지원가치_판단_중복지원_선택.md</p>
 <p>지원할지 고민되는 회사이거나 같은 그룹의 여러 공고에 지원하려는 경우에만 실행합니다. 회사명, 현재 채용공고 URL, JD, 이미 지원 중인 공고가 있다면 그 정보도 입력합니다.</p>
 <p><strong>확인할 결과:</strong> 지원 가능 요건, 회사와 직무의 특성, 지원 준비에 드는 시간, 공식 중복지원 규정, 전형 일정 충돌. 규정이 불명확하면 채용 담당자에게 확인할 사항을 남깁니다.</p>
 
 <h3>1단계. 최종 지원 직무 선정</h3>
-<p><strong>실행 파일:</strong> 03_최종_직무_선정.md</p>
+<p><strong>실행 파일:</strong> 01_최종_직무_선정.md</p>
 <p>회사 공고와 모집 직무를 입력합니다. 선택 단계의 조사 결과가 있으면 함께 전달하고, 없으면 바로 진행합니다.</p>
 <p><strong>확인할 결과:</strong> 각 직무의 실제 업무, 관련 경험과 부족한 근거, 근무환경, 장기 경력 경로. 비교 결과를 검토한 뒤 지원할 직무를 직접 확정합니다.</p>
 
 <h3>2단계. 지원서 전체 전략</h3>
-<p><strong>실행 파일:</strong> 04_지원서_전체_전략.md</p>
+<p><strong>실행 파일:</strong> 02_지원서_전체_전략.md</p>
 <p>확정한 직무와 지원서의 모든 입력 항목·자소서 질문·글자 수를 원문 그대로 입력합니다.</p>
 <p><strong>확인할 결과:</strong> 프로젝트·활동 입력 방향과 간단한 문항별 경험 배정표. 경험이 적절한지 검토하고 승인합니다. 별도의 Story Map 파일은 만들지 않습니다.</p>
 
 <h3>3단계. 자기소개서 문항별 작성</h3>
-<p><strong>실행 파일:</strong> 05_자소서_단일_문항_작성.md</p>
+<p><strong>실행 파일:</strong> 03_자소서_단일_문항_작성.md</p>
 <p>문항마다 새 채팅을 열어 질문 원문, 글자 수, 승인한 경험 배정표의 해당 행을 제공합니다. 프로젝트의 필수 공통 네 파일에 실제 접근할 수 없다면 해당 파일만 요청하고, 이전 채팅의 결정 사항이 보이지 않으면 필요한 확정 결과를 전달합니다.</p>
 <p>과거 관련 답변이 Writing Knowledge Base에서 발견됐다면 연결된 Google Drive를 검색해 원문을 직접 열람하고, 실패하면 Private GitHub 백업 또는 해당 채팅 첨부를 이용합니다. 과거의 좋은 관점만 참고하고 이전 회사의 지원동기나 확인되지 않은 사실은 옮기지 않습니다.</p>
 <p><strong>확인할 결과:</strong> 문항 분석 → 필요한 질문과 작성 방향 확인 → 제출 가능한 초안. 중요한 소재 변경이 제안되면 먼저 결정합니다.</p>
 
 <h3>4단계. 지원서 전체 QA</h3>
-<p><strong>실행 파일:</strong> 06_지원서_전체_QA.md</p>
+<p><strong>실행 파일:</strong> 04_지원서_전체_QA.md</p>
 <p>모든 문항의 최종안과 지원서 전체 입력 내용, 확정 직무, 문항별 경험 배정표를 한 채팅에 모읍니다.</p>
 <p><strong>확인할 결과:</strong> 사실·수치 오류, 경험 중복, JD와의 연결, 과거 회사용 표현, 예상 면접 질문. 수정 제안을 확인한 후 승인한 내용만 실제 지원서에 반영합니다.</p>
 
@@ -91,7 +91,7 @@
 <table>
 <thead><tr><th>자료</th><th>기준 위치</th><th>자동 반영 위치</th></tr></thead>
 <tbody>
-<tr><td>공통 규칙·Master·Writing KB·프롬프트·가이드·Review</td><td><a href="https://github.com/juknow/career-system">Public career-system</a>의 <code>Career_System/</code></td><td><a href="https://github.com/juknow/career-system-private">Private career-system-private</a>의 동일 경로</td></tr>
+<tr><td>공통 규칙·Master·Writing KB·Story Bank·프롬프트·가이드·Review</td><td><a href="https://github.com/juknow/career-system">Public career-system</a>의 <code>Career_System/</code></td><td><a href="https://github.com/juknow/career-system-private">Private career-system-private</a>의 동일 경로</td></tr>
 <tr><td>개인 지원서 원본 PDF·MD·TXT</td><td><a href="https://drive.google.com/drive/folders/1H6306HKrzjMN5e_8-DO49w8pH0Lepuc-">Google Drive Career_Originals/Applications</a> 아래 연도/기업명</td><td>Private <code>Career_System/Data/Essay_Archive/</code> 아래 동일한 연도/기업명</td></tr>
 </tbody>
 </table>
