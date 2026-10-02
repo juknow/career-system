@@ -1,8 +1,8 @@
-# Personal Writing Knowledge Base v0.5 — 원문 대조 색인 갱신본
+# Personal Writing Knowledge Base v0.6 — 원문 대조 색인 갱신본
 
 > 이 문서는 **기존 Career Master Profile을 대체하지 않는다.** 과거 지원서에 나타난 질문 대응 방식, 판단 근거, 해석의 차이, 본인다운 표현의 재활용을 지원하는 *보조 검색 인덱스*다.
 >
-> 자료 상태: 기존 KB·GS·LG CNS 등 원문에 더하여 2026-09-29 기준 Drive의 기아·현대모비스·하나은행·NH투자증권·LG유플러스·HD현대조선해양·LG전자 지원서의 실제 자기소개 항목을 대조해 색인했다. 신한은행 보관 PDF에서는 자기소개서 본문을 확인하지 못했다. 원문은 공개 저장소 외부인 연결된 Google Drive `Career_Originals/Applications/`에서 관리하며, Private GitHub의 `Career_System/Data/Essay_Archive/`에 별도 백업한다. Google Drive의 실제 파일이 해당 채팅에서 열람되지 않을 수도 있다.
+> 자료 상태: 기존 색인 원문에 더하여 2026-10-02 기준 Drive의 CJ올리브영·DB Inc. 지원서 원문을 실제 대조해 색인했다. DB Inc. 원문은 아카이브에 **미제출 작성본**으로 기록되어 있으므로 제출 완료본으로 간주하지 않는다. 신한은행 보관 PDF에서는 자기소개서 본문을 확인하지 못했다. 원문은 공개 저장소 외부인 연결된 Google Drive `Career_Originals/Applications/`에서 관리하며, Private GitHub의 `Career_System/Data/Essay_Archive/`에 별도 백업한다. Google Drive의 실제 파일이 해당 채팅에서 열람되지 않을 수도 있다.
 >
 > 데이터 관리: 자기소개서 재활용에는 생년월일, 전화번호, 이메일, 주소, 사진, 수험번호가 필요하지 않으므로 이 문서에 넣지 않았다.
 
@@ -41,6 +41,8 @@
 | LGU26 | [LG유플러스](https://drive.google.com/drive/folders/1aaCCyMKRmFi9BadHM2WVvmZ-jqcTj1PN) | `LG유플러스/2026_LG_유플러스_AIDC_사업기획_문준호_지원서_아카이브.pdf` | S1~S2(My Story); My Experience는 수업 요약 |
 | HD26 | [HD현대조선해양](https://drive.google.com/drive/folders/146kU1eUODV9--N3xXCo6wpUDXArqBFfx) | `HD현대조선해양/2026_HD현대조선해양_문준호_지원서_아카이브.pdf` | Q1~Q4 |
 | LGE26 | [LG전자](https://drive.google.com/drive/folders/19-IyI58Bn7yq8zKtZ1fvmoWQn3qSvrUq) | `LG전자/2026_LG전자_MS사업본부_품질_문준호_지원서_아카이브.md` (PDF도 있음) | Q1~Q2 |
+| CJ26 | [CJ올리브영](https://drive.google.com/drive/folders/1NPLePqJl_B9Hx3gQodmXhRg0mgq9coIm) | `CJ올리브영/CJ올리브영_2026하반기_프론트엔드_지원서_아카이브.md` (PDF도 있음) | Q1~Q3 |
+| DBINC26 | [DBInc](https://drive.google.com/drive/folders/1WME6Dy-wx37gdVRIg2HSe6vEQf6l4dDu) | `DBInc/2026_DB_Inc_SW엔지니어_문준호_지원서_아카이브.md` (PDF도 있음) | Q1~Q4; **미제출 작성본**, Q3·Q4 본문 동일 |
 
 **별도 보관:** 신한은행 `신한은행/신한은행 입사지원서.pdf`의 당시 확보본에는 자소서 본문이 없어 색인하지 않았다. 신규 파일이 추가되면 실제 원문을 재조회한다. 표의 Private 경로는 백업 *예상 상대 경로*가 아닌 원본 파일명에 대응한 조회 경로이며, 각 신규 파일의 Private 백업 성공 여부는 별도 검증한다.
 
@@ -100,6 +102,13 @@
 | HD26-Q4 | HD26 PDF 6쪽 | HD현대조선해양 | AI 활용·직무 적용 | OPIc AI Coach | STT와 LLM 피드백의 단계별 책임 분리, 검증 가능한 품질 문제를 분리해 접근 |
 | LGE26-Q1 | LGE26 MD §자기소개서 1 | LG전자 / MS사업본부 품질 | 지원동기·향후 계획 | Dr. COG | VOC 분류, 튜토리얼·UI 개선, 일본어 현지화를 시장품질 개선 흐름으로 서술. 세부 개선은 원문 서술 상태 |
 | LGE26-Q2 | LGE26 MD §자기소개서 2 | LG전자 | 디지털 역량·효율 개선 | 전자투표 | 절차 분석→요구사항→시연·피드백→정식 도입으로 이어진 실제 업무 디지털화 |
+| CJ26-Q1 | CJ26 MD §Step 2 자기소개 1 | CJ올리브영 / 프론트엔드 개발 | 높은 목표·새로운 방식·성과 | OPIc AI Coach | 피드백 품질을 전사 오류·말하기 지표·LLM 의미 평가로 나누고 사용자 전사 확인을 사이에 둬, 복잡한 문제를 책임별 파이프라인으로 분리하는 설계 관점 |
+| CJ26-Q2 | CJ26 MD §Step 2 자기소개 2 | CJ올리브영 / 프론트엔드 개발 | 직무 강점·경험·입사 후 목표 | 전자투표·Dr. COG | 구현 자체보다 사용자 흐름과 불편을 먼저 보고, 배포 후 실제 반응·데이터를 다시 확인해 개선으로 연결하는 제품 중심 프론트엔드 관점. 올리브영 목표는 해당 직무 맥락에 한정 |
+| CJ26-Q3 | CJ26 MD §Step 2 자기소개 3 | CJ올리브영 / 프론트엔드 개발 | 서비스 개선 제안·개발 방향 | 올리브영 좋아요/가격 변화 개선안 | 좋아요를 구매 의도 신호로 해석해 기준가격·현재가격·가격하락 필터·선택형 알림을 제안하고, 재방문·장바구니·구매 전환율과 알림 해제율 및 A/B 테스트로 검증하도록 설계. **구현 완료 경험이 아닌 서비스 제안** |
+| DBINC26-Q1 | DBINC26 MD §자기소개서 1 | DB Inc. / S/W엔지니어(제조계열사) | 지원동기·직무 노력 | 복수전공·KUCC 홈페이지·Dr. COG·전자투표 | 실제 사용자의 요구를 시스템으로 구현하고 배포·운영까지 책임진 경험을 제조 현장 S/W로 연결. 반도체·제조 분야 지원동기는 당시 회사·직무 맥락에 한정. **미제출 작성본** |
+| DBINC26-Q2 | DBINC26 MD §자기소개서 2 | DB Inc. | 다양한 배경의 구성원과 협업 | Dr. COG | 기획·개발·아트의 서로 다른 판단 기준을 플레이 가능한 프로토타입으로 맞추고, 출시 후에는 사용자 데이터를 공통 판단 근거로 전환. **미제출 작성본** |
+| DBINC26-Q3 | DBINC26 MD §자기소개서 3 | DB Inc. | 타인의 불편 발견·문제 해결 | OPIc AI Coach | 혼자 연습할 때의 피드백 루프 문제를 서비스 문제로 정의하고 STT·수치 계측·LLM 평가·사용자 확인·Provider를 책임 단위로 분리해 안정적인 피드백 흐름을 설계. **미제출 작성본** |
+| DBINC26-Q4 | DBINC26 MD §자기소개서 4 | DB Inc. | AI 활용 문제 해결·입사 후 적용 | OPIc AI Coach | 원문상 Q3와 **동일 본문**. AI를 단일 판단기로 두지 않고 전사·측정·의미 평가·모델 Provider의 책임과 인터페이스를 분리하는 설계 및 제조 시스템 적용 포부. **미제출 작성본** |
 
 **GS 원문 수집 상태:** 4개 문항과 사용자 제공 답변 전문 확보(2026-09-27). 질문·답변 전체는 위 카탈로그의 GS26 원문 MD 및 PDF로 조회한다. 실제 제출본과의 동일성·제출일은 별도 미확인. GS의 회사별 지원동기·향후 영업 목표는 전역 커리어 선호로 자동 이전하지 않는다.
 
