@@ -1,4 +1,4 @@
-# Verification Queue v1.2 — 전체 아카이브 재감사·사용자 승인 갱신본
+# Verification Queue v1.3 — KUCC 운영 성과 검증 완료 갱신본
 
 > 검토 기준: Career Master Profile v1.5, Writing KB v0.7, Experience Story Bank v1.2, Google Drive/Private GitHub에 보관된 2026년 18개 기업 지원서 아카이브, GitHub OpenCoachAI 현재 확인 가능 코드. 재감사일: 2026-10-04.
 >
@@ -12,7 +12,7 @@
 |---|---|---|---|
 | VERIFY-01 | KRAFTON Jungle Game Lab 교육시간: 과거 880 vs 2,400시간 | **해결.** 사용자 직접 재확인: **24주 × 주 100시간 = 총 2,400시간**. 현행 Master에도 2,400시간 반영됨. | 새 지원서에는 2,400시간만 사용. 880시간은 과거 오류 기록으로만 보존. |
 | VERIFY-02 | 전자투표 개발 일정의 **추가 2개월 연장** 서술과 자소서별 포함 여부 | **해결 — 사용 맥락형 사실.** 사용자 확인에 따라 실제 경험의 세부로서 `2개월 연장`을 필요한 자소서에서는 사용할 수 있다. 다른 자소서에서 이 세부가 빠져 있는 것은 사실 충돌이 아니라 문항 의도와 글자수에 따른 **서술 초점의 차이**다. | 일정 조정·품질 우선·이해관계자 설득이 핵심인 문항에서는 `2개월 연장`을 구체적으로 사용할 수 있고, 다른 문항에서는 굳이 넣지 않는다. 과거 자소서 간 포함/미포함 차이를 불일치로 취급하지 않는다. |
-| VERIFY-03 | KT 지원서의 KUCC 재등록률 45→68%, 교육 세션 5→10, 방문자 약 +30%·조회수 약 +27% | **확인 필요.** 과거 지원서 서술로 Master/Story에 분리 표시됨. | 재등록률 분모·비교연도, 교육 세션 정의·횟수, 웹 분석 기간·도구·기준값 확인. |
+| VERIFY-03 | KT 지원서의 KUCC 재등록률 45→68%, 교육 세션 5→10, 방문자 약 +30%·조회수 약 +27% | **해결 — 사용자 직접 확인.** 비교 기준은 회장 취임 전 → 회장 임기 종료 시점. 재등록률은 내부 회원정보 수집용 Google Form, 세션 수는 내부 수강신청 사이트, 홈페이지 방문자·조회수는 Firebase Analytics를 근거로 확인했다. | 네 수치 모두 신규 지원서에서 확정 성과로 사용할 수 있다. 다만 특정 한 운영 활동이 각 지표 상승의 유일한 원인이라고 단정하지 않는다. |
 | VERIFY-04 | KT 원본: 지원 직무 NW인프라운용, 자기소개서 본문 B2B 컨설팅·세일즈 | **원문 내부 불일치 확인·재사용 주의.** 역사적 제출/작성본은 변경하지 않음. | 향후 해당 원문 활용 시 직무 포장과 현재 지원 직무를 반드시 분리. |
 | VERIFY-05 | 헬로메이플 시작일(현행 Master 2026-04-01 / LIG 서술 2026-03-02), KUCC 홈페이지 시작일(현행 Master 2023-05-08 / LG전자·기타 지원서 2023-07-01) | **충돌 유지.** 두 프로젝트의 시작일 정의가 각각 다른 것인지 미확인. 현행 Master의 확정값 표기와 '어느 값도 새 글에서 단정 금지' 경고가 함께 있어 후속 정합성 점검 필요. | 사용자 확인: 프로젝트 전체 시작일·본인 참여 시작일·실제 개발 시작일을 구분. 확인 전 두 시작일 모두 새 지원서에서 임의 선택하지 않음. |
 | VERIFY-06 | KB OPIc 평가 기준 '7개' 주장과 본문에 나열한 6개 묶음 | **해결.** 2026-10-04 재확인 결과 OpenCoachAI `variant/opicoach` 및 `variant/opiccoachlocalllm`의 `backend/app/schemas/evaluation.py`에서 **7개 평가 차원**이 독립 필드로 다시 확인됨: task_completion, content_specificity, discourse_organization, time_frame_control, grammar_control, vocabulary_range, fluency_comprehensibility. 과거 지원서의 '시제·문법' 표현은 두 필드를 한 묶음으로 축약한 서술. | 신규 글에서는 7개 평가 차원이 코드에 존재한다는 사실을 사용할 수 있다. 과거 지원서 원문은 소급 수정하지 않는다. Master §6.6과 Story `EXP-006-A`에 남은 '정확한 7개 기준 미확인' 문구는 **후속 정합성 수정 대상**이다. |
@@ -37,9 +37,9 @@
 
 ## 3. 2026-10-04 재감사 요약
 
-- **해결/정정 완료:** VERIFY-01, VERIFY-02, VERIFY-06, VERIFY-08, VERIFY-11, VERIFY-17, VERIFY-18, VERIFY-19.
+- **해결/정정 완료:** VERIFY-01, VERIFY-02, VERIFY-03, VERIFY-06, VERIFY-08, VERIFY-11, VERIFY-17, VERIFY-18, VERIFY-19.
 - **원문 내부 불일치 재사용 주의:** VERIFY-04.
-- **추가 확인 필요 또는 부분 확인:** VERIFY-03, VERIFY-05, VERIFY-07, VERIFY-09, VERIFY-10, VERIFY-12, VERIFY-13, VERIFY-14, VERIFY-15, VERIFY-16.
+- **추가 확인 필요 또는 부분 확인:** VERIFY-05, VERIFY-07, VERIFY-09, VERIFY-10, VERIFY-12, VERIFY-13, VERIFY-14, VERIFY-15, VERIFY-16.
 - VERIFY-06 해결에 따라 Master §6.6 및 Story `EXP-006-A`의 '7개 평가 기준 미확인' 문구는 별도 승인 후 정합성 수정이 필요하다.
 - VERIFY-05는 하나의 행에 **헬로메이플 시작일**과 **KUCC 홈페이지 시작일**이라는 서로 다른 프로젝트 날짜 충돌이 함께 있어, 후속 사용자 확인 시 두 하위 항목으로 나눠 해결한다.
 
