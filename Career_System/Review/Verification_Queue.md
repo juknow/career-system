@@ -1,6 +1,6 @@
-# Verification Queue v1.4 — 추가 사용자 검증 완료 갱신본
+# Verification Queue v1.5 — VERIFY-01~19 사용자 검증 정리본
 
-> 검토 기준: Career Master Profile v1.5, Writing KB v0.7, Experience Story Bank v1.2, Google Drive/Private GitHub에 보관된 2026년 18개 기업 지원서 아카이브, GitHub OpenCoachAI 현재 확인 가능 코드. 재감사일: 2026-10-04.
+> 검토 기준: Career Master Profile, Writing KB, Experience Story Bank, Google Drive/Private GitHub에 보관된 2026년 18개 기업 지원서 아카이브, GitHub OpenCoachAI 현재 확인 가능 코드. 재감사일: 2026-10-04. 추가 사용자 사실 확인: 2026-10-06.
 >
 > **상태 구분:** `해결`은 해당 쟁점이 확인됐다는 뜻, `원문 확인·재사용 주의`는 과거 서술의 존재만 확인됐다는 뜻, `부분 확인`은 코드 등 일부 근거만 있는 상태, `확인 필요`는 객관적 근거/사용자 답변이 추가로 필요한 상태.
 >
@@ -27,19 +27,19 @@
 | ID | 확인 대상 / 출처 | 이번 감사에서 확인한 상태 | 남은 확인 또는 사용 지침 |
 |---|---|---|---|
 | VERIFY-12 | OPIc AI Coach 개발기간 — 과거 지원서 `2026.05~2026.09` | **해결 — 사용자 직접 확인.** 프로젝트는 **2026.05 시작 후 현재도 계속 진행 중**이며, `2026.09`는 9월에 지원서를 작성하면서 입력한 당시 기준시점일 뿐 프로젝트 종료일이 아니다. | Master에는 `2026.05 ~ 진행 중`으로 관리한다. 과거 지원서의 2026.09는 당시 작성 시점 기록으로 보존하며 종료일로 재사용하지 않는다. |
-| VERIFY-13 | Dr. COG 리뷰 유형화, 튜토리얼 추가, UI 개편 — LG전자 지원서·Story EXP-001-D | **과거 서술 확인·기여 미확인.** 출시 후 운영/사용자 데이터 검토 자체는 Master 확정. | 각 개선의 직접 담당 범위, 시행 시기, 제품 코드·리뷰 자료 및 개선별 성과 확인. 일본어 현지화 성과와 별개로 관리. |
-| VERIFY-14 | OPIc AI Coach 전사 오류와 피드백 오류의 분리 검증 — LGU26-S2·Story `EXP-006-B`·KB `INS-013` | **부분 확인 강화.** 현재 `backend/app/evals/transcription_metrics.py`에서 WER와 substitution/deletion/insertion breakdown, filler retention precision/recall, adjacent repetition retention을 직접 확인했다. 따라서 '전사 오류와 filler·반복 보존을 분리해 측정하는 평가 방법이 구현되어 있다'는 점은 코드로 확인된다. 다만 자소서 작성 당시 실제 실험 범위·비교 모델·샘플 수·결과 수치까지는 별도 확인되지 않았다. | 사용한 gold transcript 기준, 샘플/테스트 규모, 당시 실제 비교 모델·브랜치·결과 수치를 확인하기 전에는 '성능이 개선됐다'거나 특정 모델이 우수했다고 단정하지 않는다. |
-| VERIFY-15 | 전자투표 권한·대리 참여·중복투표 DB 제약·가결 기준 및 경계 테스트 — KDB26-Q2, NHINV26-Q1, Master §6.2, Story `EXP-002-D` | **과거 서술 반복 확인·구현 세부 미확인.** 복수 지원서에서 권한·출석·투표 상태·중복투표 규칙을 신뢰성 설계의 핵심으로 설명하고 있으나, 개별 DB 제약·테스트 케이스와 본인 직접 구현 범위를 코드로 독립 대조한 것은 아님. | 확정된 React/Node.js·Express/PostgreSQL 스택과 개별 무결성 규칙·테스트 구현 주장을 구분한다. 소스/테스트를 확인하기 전 세부 구현을 `[확정]`으로 승격하지 않는다. |
-| VERIFY-16 | 헬로메이플 실시간 랭킹 리더보드 구현 — LIG 원문·Story EXP-005-B | **원문 서술 확인·구현 세부 미확인.** | 개인 담당 구현 범위, 데이터 갱신 방식, 실제 서비스 코드 또는 사용자 직접 확인. 우수작 선정 성과와 리더보드 단독 효과의 인과관계 주장 금지. |
+| VERIFY-13 | Dr. COG 리뷰 유형화, 튜토리얼 추가, UI 개편 — LGE26-Q1·Story `EXP-001-D` | **해결 — 사용자 직접 확인.** 사용자가 출시 후 리뷰를 직접 유형화했고, 그 결과를 바탕으로 **튜토리얼 추가와 UI 개편을 직접 구현**했다. | 신규 지원서에서 직접 수행 사실로 사용할 수 있다. 개선별 독립 성과 수치나 정확한 시행 시기는 별도 근거 전 임의로 추가하지 않는다. |
+| VERIFY-14 | OPIc AI Coach 전사 오류와 피드백 오류의 분리 검증 — LGU26-S2·Story `EXP-006-B`·KB `INS-013` | **해결 — 코드 + 사용자 직접 확인.** 사용자가 **gold transcript를 직접 제작**하고 로컬 모델, LLM 기반 평가 흐름, 유료 STT 모델을 포함한 실제 비교 실험을 수행했다. 현재 코드에서도 WER, substitution/deletion/insertion, filler retention, adjacent repetition retention 평가 로직이 확인된다. | 실제 비교 실험 수행 사실은 사용 가능. 정확한 gold transcript 수, 모델명, 모델별 수치와 우열은 별도 확인 전 임의로 추가하지 않는다. |
+| VERIFY-15 | 전자투표 권한·대리 참여·중복투표 DB 제약·가결 기준 및 경계 테스트 — KDB26-Q2, NHINV26-Q1, Master §6.2, Story `EXP-002-D` | **해결 — 사용자 직접 확인.** 권한·출석/투표 자격·대리 참여/중복투표 방지·가결 기준·DB 제약·정상/오입력/경계조건 테스트를 **팀원들과 함께 설계하고 구현**했다. | 확정 경험으로 사용 가능하되 사용자의 단독 구현으로 과장하지 않고 **팀 공동 설계·구현**으로 표현한다. |
+| VERIFY-16 | 헬로메이플 실시간 랭킹 리더보드 구현 — LIG 원문·Story `EXP-005-B` | **해결 — 사용자 직접 확인.** 사용자가 직접 리더보드를 구현했으며, MapleStory Worlds 서버에 데이터를 저장·갱신하고 점수 변화에 따른 순위 갱신과 **주 단위 초기화** 흐름을 구현했다. | 직접 구현 사실과 저장·갱신·주간 초기화 구조는 사용 가능. 동점 처리 등 확인하지 않은 세부 알고리즘은 임의로 추가하지 않는다. 우수작 선정은 팀 결과로 유지한다. |
 | VERIFY-17 | LG CNS 과거 지원서의 전자투표 기술 스택: 본문 `React + Firebase` 서술 vs 최신 Master의 `React + Node.js/Express + PostgreSQL`, Firebase 미사용 | **해결 — 과거 기술 서술 오류.** 사용자 확인과 Master §6.2에 따라 전자투표의 확정 스택은 React 프론트엔드, Node.js·Express REST API, PostgreSQL이며 **Firebase는 전자투표에 사용하지 않았다.** Firebase는 KUCC 공식 홈페이지 경험에만 연결한다. | LGCNS 과거 원문은 역사 기록으로 보존하되 해당 `Firebase 연동` 문장은 신규 지원서·면접 근거로 재사용하지 않는다. |
 | VERIFY-18 | KUCC 활동 종료일: Master/CJ/GS의 2026.08~08.31 vs LGCNS·LG전자 2026.12.19, DBInc 2026.12 | **해결 — 과거 예정 종료일과 실제 기준값의 차이.** 현재 canonical 활동기간은 Master의 **2023.03.01 ~ 2026.08.31**이다. DBInc 아카이브 자체에도 2026.12가 '이전 아카이브의 예정 종료월 기재값'이라고 명시되어 있다. | 신규 지원서에는 2026.08.31을 사용한다. 2026.12/12.19 값은 과거 지원서 기록으로만 보존하고 현재 활동기간으로 재사용하지 않는다. |
 | VERIFY-19 | KT 지원서의 고려대학교 재학기간 `2018.03.02~2026.03.02` vs 현재 Master 및 후속 지원서의 졸업예정 2027.02 | **해결 — 과거 지원서의 잘못된 기간 입력/표시로 관리.** 현재 canonical 학력은 고려대학교 2018.03 입학, **2027.02 졸업예정**이다. | 신규 지원서·면접에서는 2027.02 졸업예정을 사용한다. KT 과거 원문의 2026.03.02는 역사 기록으로만 보존하고 재사용하지 않는다. |
 
 ## 3. 2026-10-04 재감사 요약
 
-- **해결/정정 완료:** VERIFY-01, VERIFY-02, VERIFY-03, VERIFY-05, VERIFY-06, VERIFY-07, VERIFY-08, VERIFY-09, VERIFY-10, VERIFY-11, VERIFY-12, VERIFY-17, VERIFY-18, VERIFY-19.
+- **해결/정정 완료:** VERIFY-01, VERIFY-02, VERIFY-03, VERIFY-05, VERIFY-06, VERIFY-07, VERIFY-08, VERIFY-09, VERIFY-10, VERIFY-11, VERIFY-12, VERIFY-13, VERIFY-14, VERIFY-15, VERIFY-16, VERIFY-17, VERIFY-18, VERIFY-19.
 - **원문 내부 불일치 재사용 주의:** VERIFY-04.
-- **추가 확인 필요 또는 부분 확인:** VERIFY-13, VERIFY-14, VERIFY-15, VERIFY-16.
+- **추가 확인 필요 또는 부분 확인:** 없음.
 - VERIFY-06 해결에 따라 Master §6.6 및 Story `EXP-006-A`의 '7개 평가 기준 미확인' 문구는 별도 승인 후 정합성 수정이 필요하다.
 
 ## 4. 반영 규칙
